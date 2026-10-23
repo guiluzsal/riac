@@ -24,6 +24,20 @@ zensical serve      # prévia local em http://localhost:8000
 zensical build       # gera o site em site/
 ```
 
+## Como o catálogo de recursos é gerado
+
+As páginas em `docs/recursos/*.md` **não listam os recursos manualmente**.
+Cada página chama a macro `recursos_da_categoria("<categoria>")` (definida em
+`main.py`), que lê `data/recursos.yaml` em tempo de build e renderiza os
+recursos daquela categoria. Isso usa a extensão nativa de macros do
+Zensical (`[project.plugins.macros]` em `zensical.toml`), compatível com a
+API do `mkdocs-macros-plugin`.
+
+Na prática, isso significa que **para adicionar um recurso ao catálogo
+basta editar `data/recursos.yaml`** — a página da categoria correspondente é
+atualizada automaticamente no próximo `zensical build`, sem precisar tocar
+em nenhum arquivo `.md` de `docs/recursos/`.
+
 ## Fluxo de contribuição
 
 1. Faça um fork ou crie uma branch a partir de `main`.
