@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/riac/riac/schemas/recursos.schema.json",
-  "title": "Catálogo de recursos do RIAC",
+  "title": "Recursos do RIAC",
   "description": "Schema de validação para data/recursos.yaml, conforme o modelo de dados definido em CLAUDE.md.",
   "type": "array",
   "minItems": 1,

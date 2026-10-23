@@ -11,7 +11,7 @@ GitHub.
 
 ## O que o RIAC oferece
 
-- Catálogo de recursos curados de CTI, com descrição em português e
+- Recursos curados de CTI, com descrição em português e
   metadados estruturados.
 - Verbetes explicativos sobre conceitos, modelos e práticas de CTI.
 - Glossário bilíngue EN↔PT com justificativa de tradução.

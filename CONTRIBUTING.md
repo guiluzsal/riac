@@ -34,7 +34,7 @@ zensical serve      # prévia local em http://localhost:8000
 zensical build       # gera o site em site/
 ```
 
-## Como o catálogo de recursos é gerado
+## Como os recursos são gerados
 
 As páginas em `docs/recursos/*.md` **não listam os recursos manualmente**.
 Cada página chama a macro `recursos_da_categoria("<categoria>")` (definida em

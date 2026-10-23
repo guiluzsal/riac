@@ -11,7 +11,7 @@ O RIAC é uma plataforma colaborativa e aberta, em português, que reúne recurs
 ## Escopo
 
 ### Dentro do escopo
-- **Catálogo de recursos:** links curados para ferramentas, bases e referências de CTI, com descrição em português e metadados.
+- **Recursos:** links curados para ferramentas, bases e referências de CTI, com descrição em português e metadados.
 - **Verbetes:** artigos explicativos sobre conceitos, modelos e práticas de CTI.
 - **Glossário bilíngue EN↔PT:** cada termo traz a tradução recomendada e a justificativa.
 - **Contexto brasileiro:**
