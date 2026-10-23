@@ -1,0 +1,63 @@
+name: Sugerir um verbete
+description: Proponha um conceito, modelo ou prática de CTI para virar um verbete.
+title: "[Verbete]: "
+labels: ["verbete", "conteúdo"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Veja o template de verbete (seções obrigatórias, admonition de
+        Origem, exigência de referência verificável) em `CLAUDE.md` antes
+        de preencher.
+
+  - type: input
+    id: nome
+    attributes:
+      label: Nome do conceito
+      description: Em português, com o nome em inglês entre parênteses se houver.
+      placeholder: "Ex.: Pirâmide da Dor (Pyramid of Pain)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: definicao
+    attributes:
+      label: Definição proposta
+      description: Uma ou duas frases objetivas.
+    validations:
+      required: true
+
+  - type: input
+    id: origem
+    attributes:
+      label: Origem
+      description: Autor(es), ano e contexto em que o conceito foi proposto.
+    validations:
+      required: true
+
+  - type: textarea
+    id: referencias
+    attributes:
+      label: Referências
+      description: >-
+        Ao menos uma referência verificável (link para o material
+        original). Verbetes sem referência verificável não podem ser
+        publicados.
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags sugeridas
+      description: Categoria e subtema, separados por vírgula.
+      placeholder: "frameworks-e-modelos, analise-de-intrusao"
+    validations:
+      required: false
+
+  - type: textarea
+    id: comentarios
+    attributes:
+      label: Comentários adicionais (opcional)
+    validations:
+      required: false

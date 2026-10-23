@@ -1,11 +1,8 @@
 # Como contribuir
 
 O RIAC é um projeto colaborativo e aberto. Contribuições de verbetes, recursos
-do catálogo, correções e melhorias são bem-vindas via Pull Request.
-
-> Este guia está em construção. Ele será expandido com instruções detalhadas
-> sobre Issue Forms, template de Pull Request e regras de revisão assim que
-> esses mecanismos estiverem configurados no repositório.
+do catálogo, correções e melhorias são bem-vindas via Pull Request ou, para
+quem não usa Git, via formulário de issue.
 
 ## Antes de contribuir
 
@@ -14,6 +11,19 @@ do projeto, as convenções de conteúdo (template de verbete, modelo de dados
 do catálogo em `data/recursos.yaml`, categorias válidas) e as regras
 obrigatórias de conteúdo (apenas material TLP:CLEAR, não inventar dados,
 citar fontes).
+
+## Sem usar Git
+
+Use um dos formulários de issue:
+
+- **[Sugerir um recurso](https://github.com/guiluzsal/riac/issues/new?template=sugerir-recurso.yml)** —
+  os campos espelham `schemas/recursos.schema.json`.
+- **[Sugerir um verbete](https://github.com/guiluzsal/riac/issues/new?template=sugerir-verbete.yml)** —
+  para propor um conceito, modelo ou prática de CTI.
+
+Ou clique no ícone de lápis (✎) em qualquer página do
+[site publicado](https://guiluzsal.github.io/riac/) para editá-la
+diretamente no GitHub, o que já abre um Pull Request.
 
 ## Ambiente de desenvolvimento
 
@@ -38,15 +48,74 @@ basta editar `data/recursos.yaml`** — a página da categoria correspondente é
 atualizada automaticamente no próximo `zensical build`, sem precisar tocar
 em nenhum arquivo `.md` de `docs/recursos/`.
 
-## Fluxo de contribuição
+## Como propor um recurso (via Pull Request)
+
+1. Edite `data/recursos.yaml` seguindo o modelo de dados do `CLAUDE.md`.
+2. Escolha **uma única categoria principal**, pelo uso mais comum do
+   recurso em CTI (não por quem o publica). Use `tags` para aspectos
+   secundários — por exemplo, uma plataforma multiuso como o VirusTotal
+   fica na categoria do uso mais frequente e recebe as demais como tags.
+   As regras completas de desambiguação entre categorias estão no
+   `CLAUDE.md`.
+3. Valide localmente:
+
+   ```bash
+   pip install check-jsonschema
+   check-jsonschema --schemafile schemas/recursos.schema.json data/recursos.yaml
+   ```
+
+## Como propor um verbete
+
+1. Crie o arquivo em `docs/verbetes/` com nome em kebab-case e sem acento
+   (ex.: `diamond-model.md`), seguindo exatamente o template definido no
+   `CLAUDE.md` (front matter `tags`, admonition `!!! info "Origem"`,
+   seções Definição, Explicação, Exemplo prático, Relação com outros
+   modelos, Termos relacionados, Referências).
+2. Inclua ao menos **uma referência verificável** — um verbete sem fonte
+   checável não pode ser publicado.
+3. Adicione o verbete à `nav` em `zensical.toml` e, se usar termos novos
+   em inglês, inclua-os em `docs/glossario.md` com a tradução recomendada
+   e a justificativa.
+
+## Regras de conteúdo obrigatórias
+
+- Só material **TLP:CLEAR**.
+- Nunca hospede amostras de malware ou IOCs sensíveis; aponte para
+  repositórios que já fazem isso com os controles adequados.
+- Cite fontes e respeite licenças de terceiros.
+- Não invente dados, datas ou atribuições. Sem fonte, sem afirmação.
+
+## Rodando o CI de qualidade localmente
+
+O workflow `qualidade.yml` roda em todo Pull Request. Para checar antes de
+abrir o PR:
+
+```bash
+# build do site
+zensical build
+
+# schema do catálogo
+pip install check-jsonschema
+check-jsonschema --schemafile schemas/recursos.schema.json data/recursos.yaml
+
+# markdownlint e ortografia (requerem Node.js)
+npm install
+npx markdownlint-cli2
+npx cspell "**/*.md"
+```
+
+Se o cspell acusar uma palavra correta como desconhecida (sigla, nome
+próprio, termo técnico de CTI), adicione-a à lista `words` em
+`cspell.json` em vez de reescrever o texto.
+
+## Fluxo de contribuição (Pull Request)
 
 1. Faça um fork ou crie uma branch a partir de `main`.
 2. Adicione ou edite o conteúdo seguindo as convenções do `CLAUDE.md`.
-3. Rode `zensical build` localmente para confirmar que o site compila sem
-   erros.
-4. Abra um Pull Request descrevendo a mudança.
-5. Todo PR de conteúdo precisa da revisão de pelo menos um mantenedor antes
-   de ser mesclado.
+3. Rode os checks da seção anterior localmente.
+4. Abra um Pull Request — o template guia o checklist.
+5. Todo PR de conteúdo precisa da revisão de pelo menos um mantenedor
+   (ver [`CODEOWNERS`](.github/CODEOWNERS)) antes de ser mesclado.
 
 ## Licenciamento das contribuições
 

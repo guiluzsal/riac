@@ -3,6 +3,10 @@ site_name = "RIAC"
 site_url = "https://guiluzsal.github.io/riac/"
 site_description = "Repositório de Inteligência de Ameaças Cibernéticas"
 
+repo_url = "https://github.com/guiluzsal/riac"
+repo_name = "guiluzsal/riac"
+edit_uri = "edit/main/docs/"
+
 nav = [
   { "Início" = "index.md" },
   { "Verbetes" = [
@@ -27,6 +31,7 @@ nav = [
       { "Ecossistema lusófono" = "recursos/ecossistema-lusofono.md" },
       { "Aprendizado" = "recursos/aprendizado.md" },
   ] },
+  { "Contribuir" = "contribuir.md" },
 ]
 
 [project.plugins.macros]
@@ -35,3 +40,6 @@ force_render_paths = "recursos/*.md"
 
 [project.theme]
 language = "pt-BR"
+features = [
+  "content.action.edit",
+]

@@ -1,0 +1,128 @@
+name: Sugerir um recurso
+description: Indique uma ferramenta, base ou referência de CTI para o catálogo.
+title: "[Recurso]: "
+labels: ["recurso", "conteúdo"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Os campos abaixo espelham `schemas/recursos.schema.json`. Veja as
+        categorias válidas e as regras de desambiguação em `CLAUDE.md`
+        antes de preencher.
+
+  - type: input
+    id: nome
+    attributes:
+      label: Nome
+      placeholder: "Ex.: Malpedia"
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: "https://exemplo.org/"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição
+      description: Uma ou duas frases objetivas, em português.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoria
+      description: Escolha a categoria principal (uso mais comum do recurso em CTI).
+      options:
+        - frameworks-e-modelos
+        - varredura-de-internet
+        - ips-e-asns
+        - dns-e-dominios
+        - analise-de-urls-e-arquivos
+        - reputacao-e-feeds
+        - malware
+        - atores
+        - vulnerabilidades
+        - ferramentas
+        - padroes
+        - ecossistema-lusofono
+        - aprendizado
+    validations:
+      required: true
+
+  - type: dropdown
+    id: custo
+    attributes:
+      label: Custo
+      options:
+        - gratuito
+        - freemium
+        - pago
+    validations:
+      required: true
+
+  - type: dropdown
+    id: requer_cadastro
+    attributes:
+      label: Requer cadastro
+      options:
+        - sim
+        - nao
+        - parcial
+    validations:
+      required: true
+
+  - type: input
+    id: idioma
+    attributes:
+      label: Idioma(s)
+      description: Códigos separados por vírgula.
+      placeholder: "en, pt"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: fase_ciclo
+    attributes:
+      label: Fase(s) do ciclo de inteligência
+      description: Em quais fases este recurso é mais útil?
+      options:
+        - label: direcao
+        - label: coleta
+        - label: processamento
+        - label: analise
+        - label: disseminacao
+        - label: feedback
+
+  - type: dropdown
+    id: nivel
+    attributes:
+      label: Nível
+      options:
+        - iniciante
+        - intermediario
+        - avancado
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags (opcional)
+      description: Separadas por vírgula. Use para aspectos secundários.
+      placeholder: "yara, familias, atribuicao"
+    validations:
+      required: false
+
+  - type: textarea
+    id: justificativa
+    attributes:
+      label: Por que este recurso deveria entrar no catálogo? (opcional)
+    validations:
+      required: false
