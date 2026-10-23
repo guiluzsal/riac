@@ -7,6 +7,8 @@ repo_url = "https://github.com/guiluzsal/riac"
 repo_name = "guiluzsal/riac"
 edit_uri = "edit/main/docs/"
 
+extra_css = ["stylesheets/extra.css"]
+
 nav = [
   { "Início" = "index.md" },
   { "Catálogo de recursos" = [

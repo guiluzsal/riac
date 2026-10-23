@@ -1,0 +1,48 @@
+/* Cards do catálogo de recursos (docs/recursos/*.md via main.py) */
+
+.md-typeset .grid.cards {
+  grid-template-columns: 1fr;
+  gap: .6rem;
+}
+
+@media screen and (min-width: 30em) {
+  .md-typeset .grid.cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .md-typeset .grid.cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.md-typeset .grid.cards > ul > li {
+  background-color: var(--md-code-bg-color);
+  border-color: var(--md-default-fg-color--lightest);
+  padding: .9rem 1rem;
+}
+
+.md-typeset .grid.cards > ul > li > p:first-child {
+  font-size: 1rem;
+  margin-bottom: .35rem;
+}
+
+.catalogo-card__descricao {
+  font-size: .7rem;
+  line-height: 1.3;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: .5rem;
+}
+
+.catalogo-card__meta,
+.catalogo-card__tags {
+  font-size: .72rem;
+  color: var(--md-default-fg-color--light);
+  margin: .2rem 0;
+}
+
+.catalogo-card__meta strong,
+.catalogo-card__tags strong {
+  color: var(--md-default-fg-color);
+}
