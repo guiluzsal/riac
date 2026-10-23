@@ -47,6 +47,8 @@ riac/
 ├── LICENSE                  # MIT (código)
 ├── LICENSE-CONTENT          # CC BY-SA 4.0 (conteúdo)
 ├── zensical.toml
+├── overrides/
+│   └── 404.html             # página 404 customizada (theme.custom_dir)
 ├── docs/
 │   ├── index.md
 │   ├── verbetes/            # um arquivo .md por verbete

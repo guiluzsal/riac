@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+
+{% block content %}
+  <h1>404 — Página não encontrada</h1>
+  <p>A página que você está procurando não existe ou foi movida.</p>
+  <p>Tente uma destas opções:</p>
+  <ul>
+    <li><a href="{{ config.site_url }}">Página inicial</a></li>
+    <li><a href="{{ config.site_url }}recursos/varredura/">Recursos</a></li>
+    <li><a href="{{ config.site_url }}glossario/">Glossário</a></li>
+    <li><a href="{{ config.site_url }}contribuir/">Como contribuir</a></li>
+  </ul>
+{% endblock %}
