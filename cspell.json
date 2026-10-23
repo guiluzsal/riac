@@ -27,6 +27,13 @@
     "glossario",
     "schemafile",
     "checável",
+    "avaliacao",
+    "priorizacao",
+    "deteccao",
+    "ttps",
+    "multifator",
+    "serialização",
+    "schtasks",
 
     "RDAP",
     "WHOIS",
@@ -43,6 +50,11 @@
     "ETDA",
     "IPDB",
     "AbuseIPDB",
+    "STANAG",
+    "HUMINT",
+    "CIRCL",
+    "NISCC",
+    "DBIR",
 
     "Malpedia",
     "Pulsedive",
@@ -51,6 +63,8 @@
     "Censys",
     "URLhaus",
     "urlscan",
+    "Shodan",
+    "Mandiant",
 
     "Weaponization",
     "Hutchins",
@@ -58,6 +72,9 @@
     "Rohan",
     "Caltagirone",
     "Pendergast",
-    "Betz"
+    "Betz",
+    "Negroponte",
+    "Florian",
+    "Patzke"
   ]
 }

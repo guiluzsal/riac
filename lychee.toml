@@ -17,10 +17,17 @@ exclude_path = [".venv", "site", "node_modules", "Cronograma.md"]
 # (docs.yml). Checá-lo aqui é redundante com o sucesso do deploy e corre
 # risco de falso negativo por corrida entre os dois workflows quando
 # ambos disparam no mesmo push.
+#
+# securitytrails.com e abuseipdb.com bloqueiam requisições automatizadas
+# com 403 (confirmado tanto pelo lychee quanto por uma checagem manual
+# separada em 2026-10-23), mesmo sendo sites válidos e normalmente
+# acessíveis em um navegador.
 exclude = [
   "^https://apps\\.dtic\\.mil/",
   "^https://www\\.shodan\\.io/",
   "^https://guiluzsal\\.github\\.io/riac/",
+  "^https://securitytrails\\.com/",
+  "^https://www\\.abuseipdb\\.com/",
 ]
 
 accept = [200, 201, 202, 203, 204, 206, 301, 302, 303, 307, 308]

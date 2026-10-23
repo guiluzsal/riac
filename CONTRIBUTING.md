@@ -48,6 +48,12 @@ basta editar `data/recursos.yaml`** — a página da categoria correspondente é
 atualizada automaticamente no próximo `zensical build`, sem precisar tocar
 em nenhum arquivo `.md` de `docs/recursos/`.
 
+> **Atenção:** o Zensical não rastreia `data/recursos.yaml` como
+> dependência das páginas que o `main.py` lê — só o conteúdo `.md` em si.
+> Depois de editar o catálogo, rode `zensical build --clean` (não só
+> `zensical build`) ou reinicie o `zensical serve`, senão o build
+> incremental pode continuar mostrando o estado antigo da página.
+
 ## Como propor um recurso (via Pull Request)
 
 1. Edite `data/recursos.yaml` seguindo o modelo de dados do `CLAUDE.md`.

@@ -10,9 +10,36 @@ edit_uri = "edit/main/docs/"
 nav = [
   { "Início" = "index.md" },
   { "Verbetes" = [
-      { "Modelo Diamante (Diamond Model)" = "verbetes/diamond-model.md" },
-      { "Cadeia de Ataque Cibernética (Cyber Kill Chain)" = "verbetes/cyber-kill-chain.md" },
-      { "Pirâmide da Dor (Pyramid of Pain)" = "verbetes/pyramid-of-pain.md" },
+      { "Modelos de intrusão" = [
+          { "Modelo Diamante (Diamond Model)" = "verbetes/diamond-model.md" },
+          { "Cadeia de Ataque Cibernética (Cyber Kill Chain)" = "verbetes/cyber-kill-chain.md" },
+          { "Courses of Action Matrix" = "verbetes/courses-of-action-matrix.md" },
+          { "Pirâmide da Dor (Pyramid of Pain)" = "verbetes/pyramid-of-pain.md" },
+      ] },
+      { "MITRE" = [
+          { "MITRE ATT&CK" = "verbetes/mitre-attack.md" },
+          { "MITRE D3FEND" = "verbetes/mitre-d3fend.md" },
+          { "MITRE ATLAS" = "verbetes/mitre-atlas.md" },
+      ] },
+      { "Compartilhamento e avaliação de fontes" = [
+          { "Traffic Light Protocol (TLP)" = "verbetes/traffic-light-protocol.md" },
+          { "Permissible Actions Protocol (PAP)" = "verbetes/permissible-actions-protocol.md" },
+          { "Admiralty Code" = "verbetes/admiralty-code.md" },
+      ] },
+      { "Padrões de detecção e troca" = [
+          { "STIX" = "verbetes/stix.md" },
+          { "TAXII" = "verbetes/taxii.md" },
+          { "YARA" = "verbetes/yara.md" },
+          { "Sigma" = "verbetes/sigma.md" },
+      ] },
+      { "Conceitos e estratégia" = [
+          { "Ameaça Persistente Avançada (APT)" = "verbetes/advanced-persistent-threat.md" },
+          { "Sliding Scale of Cyber Security" = "verbetes/sliding-scale-of-cyber-security.md" },
+          { "VERIS" = "verbetes/veris.md" },
+          { "Indicador de Comprometimento (IOC)" = "verbetes/indicador-de-comprometimento.md" },
+          { "OSINT" = "verbetes/osint.md" },
+          { "EPSS" = "verbetes/epss.md" },
+      ] },
   ] },
   { "Glossário" = "glossario.md" },
   { "Catálogo de recursos" = [
