@@ -1,5 +1,5 @@
 # Aprendizado
 
-Material para formação de analistas: cursos, livros, currículos, podcasts, blogs de times de CTI e listas de leitura. Indique o nível no campo nivel.
+Material para formação de analistas: cursos, livros, currículos, podcasts, blogs de times de CTI e listas de leitura.
 
 {{ recursos_da_categoria("aprendizado") }}

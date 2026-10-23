@@ -26,17 +26,17 @@ def define_env(env):
             return "_Nenhum recurso cadastrado nesta categoria ainda._"
         cartoes = []
         for r in itens:
-            tags = ", ".join(r.get("tags", [])) or "—"
-            cartoes.append(
-                f"-   __[{r['nome']}]({r['url']})__\n\n"
+            bloco = (
+                f"-   ## [{r['nome']}]({r['url']}) {{: .catalogo-card__titulo }}\n\n"
                 f"    {r['descricao']}\n"
-                f"    {{: .catalogo-card__descricao }}\n\n"
-                f"    **Custo:** {r['custo']} · "
-                f"**Cadastro:** {r['requer_cadastro']} · "
-                f"**Nível:** {r['nivel']}\n"
-                f"    {{: .catalogo-card__meta }}\n\n"
-                f"    **Tags:** {tags}\n"
-                f"    {{: .catalogo-card__tags }}"
+                f"    {{: .catalogo-card__descricao }}"
             )
+            tags = r.get("tags", [])
+            if tags:
+                chips = " ".join(
+                    f'<span class="catalogo-card__tag">{t}</span>' for t in tags
+                )
+                bloco += f"\n\n    {chips}\n    {{: .catalogo-card__tags }}"
+            cartoes.append(bloco)
         corpo = "\n\n".join(cartoes)
         return f'<div class="grid cards" markdown>\n\n{corpo}\n\n</div>'

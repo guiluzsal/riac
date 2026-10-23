@@ -112,11 +112,8 @@ tags: [categoria, subtema]
   url: https://malpedia.caad.fkie.fraunhofer.de/
   descricao: Catálogo de famílias de malware com referências e regras YARA.
   categoria: malware
-  custo: gratuito            # gratuito | freemium | pago
-  requer_cadastro: parcial   # sim | nao | parcial
   idioma: [en]
   fase_ciclo: [coleta, processamento]
-  nivel: intermediario       # iniciante | intermediario | avancado
   tags: [yara, familias, atribuicao]
   verificado_em: 2026-10-22
 ```
@@ -137,7 +134,7 @@ Categorias válidas (use exatamente estes slugs no campo `categoria`):
 | `ferramentas` | Software que o analista instala ou opera: plataformas de inteligência (TIPs), gestão de casos, análise e detecção. | MISP, OpenCTI, TheHive/Cortex, CyberChef, Suricata, Zeek |
 | `padroes` | Especificações, formatos e linguagens para representar, trocar e operacionalizar inteligência. | STIX, TAXII, Sigma, YARA, OpenIOC |
 | `ecossistema-lusofono` | Instituições, normas e fontes do Brasil e de países lusófonos: CSIRTs nacionais, órgãos de governo, legislação e políticas de cibersegurança. É o diferencial do RIAC. | CERT.br, CTIR Gov, CAIS/RNP, Política Nacional de Cibersegurança, LGPD, Marco Civil da Internet, CNCS, CERT.PT |
-| `aprendizado` | Material para formação de analistas: cursos, livros, currículos, podcasts, blogs de times de CTI e listas de leitura. Indique o nível no campo `nivel`. | Currículo do FIRST CTI SIG, cursos gratuitos de CTI, blogs de fornecedores, podcasts de threat intel |
+| `aprendizado` | Material para formação de analistas: cursos, livros, currículos, podcasts, blogs de times de CTI e listas de leitura. | Currículo do FIRST CTI SIG, cursos gratuitos de CTI, blogs de fornecedores, podcasts de threat intel |
 
 Regras de classificação:
 - Cada recurso tem **uma** categoria principal. Use `tags` para aspectos secundários.

@@ -56,28 +56,6 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: custo
-    attributes:
-      label: Custo
-      options:
-        - gratuito
-        - freemium
-        - pago
-    validations:
-      required: true
-
-  - type: dropdown
-    id: requer_cadastro
-    attributes:
-      label: Requer cadastro
-      options:
-        - sim
-        - nao
-        - parcial
-    validations:
-      required: true
-
   - type: input
     id: idioma
     attributes:
@@ -99,17 +77,6 @@ body:
         - label: analise
         - label: disseminacao
         - label: feedback
-
-  - type: dropdown
-    id: nivel
-    attributes:
-      label: Nível
-      options:
-        - iniciante
-        - intermediario
-        - avancado
-    validations:
-      required: true
 
   - type: input
     id: tags

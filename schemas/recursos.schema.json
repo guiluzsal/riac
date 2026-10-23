@@ -17,11 +17,8 @@
         "url",
         "descricao",
         "categoria",
-        "custo",
-        "requer_cadastro",
         "idioma",
         "fase_ciclo",
-        "nivel",
         "verificado_em"
       ],
       "properties": {
@@ -60,14 +57,6 @@
             "aprendizado"
           ]
         },
-        "custo": {
-          "type": "string",
-          "enum": ["gratuito", "freemium", "pago"]
-        },
-        "requer_cadastro": {
-          "type": "string",
-          "enum": ["sim", "nao", "parcial"]
-        },
         "idioma": {
           "type": "array",
           "minItems": 1,
@@ -94,10 +83,6 @@
             ]
           },
           "description": "Fase(s) do ciclo de inteligência em que o recurso é mais útil."
-        },
-        "nivel": {
-          "type": "string",
-          "enum": ["iniciante", "intermediario", "avancado"]
         },
         "tags": {
           "type": "array",

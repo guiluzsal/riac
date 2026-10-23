@@ -12,7 +12,6 @@ extra_css = ["stylesheets/extra.css"]
 nav = [
   { "Início" = "index.md" },
   { "Catálogo de recursos" = [
-      { "Visão geral" = "recursos/index.md" },
       { "Frameworks e modelos" = "recursos/frameworks-e-modelos.md" },
       { "Varredura de internet" = "recursos/varredura-de-internet.md" },
       { "IPs e ASNs" = "recursos/ips-e-asns.md" },
