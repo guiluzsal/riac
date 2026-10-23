@@ -437,3 +437,16 @@
   fase_ciclo: [coleta, analise]
   tags: [darkweb, forums, ransomware, defacement]
   verificado_em: 2026-10-23
+
+- nome: Zone-H
+  url: https://www.zone-h.org/archive
+  descricao: >-
+    Arquivo público de defacements de sites na web, mantido desde 2002,
+    com submissões moderadas para verificar autenticidade antes da
+    publicação; usado para atribuir e rastrear ataques de defacement
+    reivindicados por grupos hacktivistas.
+  categoria: hacktivismo
+  idioma: [en]
+  fase_ciclo: [coleta, disseminacao]
+  tags: [defacement, arquivo]
+  verificado_em: 2026-10-23
