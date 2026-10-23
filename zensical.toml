@@ -4,6 +4,12 @@ site_description = "Repositório de Inteligência de Ameaças Cibernéticas"
 
 nav = [
   { "Início" = "index.md" },
+  { "Verbetes" = [
+      { "Modelo Diamante (Diamond Model)" = "verbetes/diamond-model.md" },
+      { "Cadeia de Ataque Cibernética (Cyber Kill Chain)" = "verbetes/cyber-kill-chain.md" },
+      { "Pirâmide da Dor (Pyramid of Pain)" = "verbetes/pyramid-of-pain.md" },
+  ] },
+  { "Glossário" = "glossario.md" },
   { "Catálogo de recursos" = [
       { "Visão geral" = "recursos/index.md" },
       { "Frameworks e modelos" = "recursos/frameworks-e-modelos.md" },
