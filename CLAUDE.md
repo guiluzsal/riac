@@ -121,34 +121,35 @@ Categorias válidas (use exatamente estes slugs no campo `categoria`):
 
 | Slug | O que agrega | Exemplos |
 |---|---|---|
-| `frameworks-e-modelos` | Modelos conceituais e analíticos que estruturam o raciocínio de CTI: como descrever ataques, classificar comportamentos, avaliar fontes e compartilhar informação com segurança. | MITRE ATT&CK, D3FEND, ATLAS, Diamond Model, Cyber Kill Chain, Pyramid of Pain, F3EAD, TLP 2.0, PAP, Admiralty Code |
-| `varredura-de-internet` | Mecanismos que varrem a internet e indexam serviços expostos: portas, banners, tecnologias e certificados por IP. Servem para mapear e pivotar infraestrutura de C2, servidores de phishing e ativos expostos. | Shodan, Censys, FOFA, ZoomEye |
-| `ips-e-asns` | Titularidade, roteamento e contexto de endereços IP: WHOIS/RDAP dos registros regionais (RIRs), ASN, histórico de BGP, geolocalização e tipo de rede (residencial, datacenter, VPN/proxy). Servem para identificar o provedor por trás de um IP e pivotar por ASN, por exemplo para detectar bulletproof hosting. | bgp.he.net (Hurricane Electric), RIPEstat, IPinfo, Team Cymru IP-to-ASN, RDAP/WHOIS da LACNIC, ARIN e RIPE NCC, Registro.br |
-| `dns-e-dominios` | Fontes sobre domínios e sua história: WHOIS, DNS passivo, subdomínios e transparência de certificados (CT logs). Servem para descobrir infraestrutura relacionada a partir de um domínio e detectar domínios recém-registrados ou imitadores. | SecurityTrails, crt.sh, DNSDumpster, ViewDNS.info |
-| `analise-de-urls-e-arquivos` | Serviços que analisam um artefato específico (URL, arquivo ou hash) e devolvem veredito, comportamento, capturas de tela e relacionamentos. Servem para triagem de indicadores suspeitos. | VirusTotal, urlscan.io, Hybrid Analysis, ANY.RUN, Joe Sandbox |
-| `reputacao-e-feeds` | Bases de reputação de IPs e domínios e feeds de indicadores compartilhados pela comunidade. Servem para enriquecer alertas e separar atividade maliciosa de ruído. | GreyNoise, AbuseIPDB, AlienVault OTX, Pulsedive, Spamhaus |
-| `malware` | Bases sobre famílias de malware: descrição técnica, capacidades, regras de detecção, amostras (apenas por link) e IOCs públicos associados. | Malpedia, MalwareBazaar, ThreatFox, URLhaus |
-| `atores` | Bases sobre grupos de ameaça: perfis, aliases entre fornecedores, motivação, setores e países visados, TTPs e histórico de campanhas. Servem à atribuição e ao rastreamento de adversários. | MITRE ATT&CK Groups, ETDA Threat Group Cards, MISP Galaxy (threat actors), ransomware.live |
-| `vulnerabilidades` | Fontes para identificar, priorizar e acompanhar vulnerabilidades e sua exploração ativa. | NVD, CVE.org, CISA KEV, EPSS, Exploit-DB |
-| `ferramentas` | Software que o analista instala ou opera: plataformas de inteligência (TIPs), gestão de casos, análise e detecção. | MISP, OpenCTI, TheHive/Cortex, CyberChef, Suricata, Zeek |
-| `padroes` | Especificações, formatos e linguagens para representar, trocar e operacionalizar inteligência. | STIX, TAXII, Sigma, YARA, OpenIOC |
-| `ecossistema-brasileiro` | Instituições, normas e fontes do Brasil: CSIRTs nacionais, órgãos de governo, legislação e políticas de cibersegurança. É o diferencial do RIAC. | CERT.br, CTIR Gov, CAIS/RNP, Política Nacional de Cibersegurança, LGPD, Marco Civil da Internet |
-| `aprendizado` | Material para formação de analistas: cursos, livros, currículos, podcasts, blogs de times de CTI e listas de leitura. | Currículo do FIRST CTI SIG, cursos gratuitos de CTI, blogs de fornecedores, podcasts de threat intel |
+| `varredura` | Mecanismos que varrem a internet e indexam serviços expostos: portas, banners, tecnologias e certificados por IP. Servem para mapear e pivotar infraestrutura de C2, servidores de phishing e ativos expostos, e para separar varredura em massa (ruído) de atividade direcionada. | Shodan, Censys, FOFA, ZoomEye, GreyNoise |
+| `ip` | Titularidade, roteamento e contexto de endereços IP: WHOIS/RDAP dos registros regionais (RIRs), ASN, histórico de BGP, geolocalização e tipo de rede (residencial, datacenter, VPN/proxy). Servem para identificar o provedor por trás de um IP e pivotar por ASN, por exemplo para detectar bulletproof hosting. | bgp.he.net (Hurricane Electric), RIPEstat, IPinfo, Team Cymru IP-to-ASN, RDAP/WHOIS da LACNIC, ARIN e RIPE NCC, Registro.br |
+| `dominio` | Fontes sobre domínios e sua história: WHOIS, DNS passivo, subdomínios e transparência de certificados (CT logs). Servem para descobrir infraestrutura relacionada a partir de um domínio e detectar domínios recém-registrados ou imitadores. | SecurityTrails, crt.sh, DNSDumpster, ViewDNS.info |
+| `ioc` | Feeds e plataformas de Indicador de Comprometimento (IOC) multi-fonte, não organizados por família de malware: compartilhamento comunitário, agregação e correlação de IPs, domínios, URLs e hashes maliciosos. | AbuseIPDB, AlienVault OTX, Pulsedive, VirusTotal, Spamhaus |
+| `malware` | Bases sobre famílias de malware (descrição técnica, capacidades, regras de detecção, amostras por link e IOCs públicos associados, organizados por família) e serviços que analisam um artefato específico — URL, arquivo ou hash — submetido pelo analista, devolvendo veredito, comportamento e capturas de tela. | Malpedia, MalwareBazaar, ThreatFox, URLhaus, urlscan.io, Hybrid Analysis, ANY.RUN, Joe Sandbox |
+| `ator` | Bases sobre grupos de ameaça: perfis, aliases entre fornecedores, motivação, setores e países visados, TTPs e histórico de campanhas. Servem à atribuição e ao rastreamento de adversários. | MITRE ATT&CK Groups, ETDA Threat Group Cards, MISP Galaxy (threat actors) |
+| `ransomware` | Bases e plataformas dedicadas a grupos e operações de ransomware: rastreamento de grupos, vítimas, sites de vazamento de dados (leak sites) e TTPs específicas dessas operações. | ransomware.live, Ransomwatch |
+| `hacktivismo` | Bases e plataformas sobre grupos, campanhas e operações de hacktivismo: motivação ideológica ou política, alvos, DDoS e defacements atribuídos, canais próprios de divulgação. | — (sem recursos cadastrados ainda) |
+| `vazamentos` | Monitoramento de vazamentos de dados e de atividade em fóruns e mercados da dark web: mapeamento de publicações, vazamentos de credenciais, ofertas de acesso e dados comprometidos, com atribuição a fórum, autor e data quando disponível. | Have I Been Pwned, analyzer.vecert.io |
+| `vulnerabilidade` | Fontes para identificar, priorizar e acompanhar vulnerabilidades e sua exploração ativa. | NVD, CVE.org, CISA KEV, EPSS, Exploit-DB |
+| `ferramenta` | Software que o analista instala ou opera: plataformas de inteligência (TIPs), gestão de casos, análise e detecção. | MISP, OpenCTI, TheHive/Cortex, CyberChef, Suricata, Zeek |
+| `ecossistema` | Instituições, normas e fontes do Brasil: CSIRTs nacionais, órgãos de governo, legislação e políticas de cibersegurança. É o diferencial do RIAC. | CERT.br, CTIR Gov, CAIS/RNP, Política Nacional de Cibersegurança, LGPD, Marco Civil da Internet |
 
 Regras de classificação:
 - Cada recurso tem **uma** categoria principal. Use `tags` para aspectos secundários.
-- Em caso de dúvida, classifique pelo **uso principal do recurso no trabalho de CTI**, não por quem o publica. Exemplo: o ATT&CK é publicado pela MITRE, mas entra em `frameworks-e-modelos`.
-- Recursos brasileiros que se encaixam claramente em outra categoria ficam nela, com a tag `brasil`. Exemplo: um feed de indicadores publicado por um CSIRT brasileiro iria para `reputacao-e-feeds`. A categoria `ecossistema-brasileiro` é para instituições, normas e políticas.
-- **Categorias de infraestrutura** (`varredura-de-internet`, `ips-e-asns`, `dns-e-dominios`, `analise-de-urls-e-arquivos`, `reputacao-e-feeds`): classifique pela **pergunta que o recurso responde melhor**.
-  - "O que está rodando neste IP?" → `varredura-de-internet`.
-  - "A quem pertence este IP e por onde ele é roteado?" → `ips-e-asns`.
-  - "Quem é dono deste domínio e o que mais está ligado a ele?" → `dns-e-dominios`.
-  - "Este artefato específico é malicioso e o que ele faz?" → `analise-de-urls-e-arquivos`.
-  - "Este indicador já foi visto em atividade maliciosa ou é ruído?" → `reputacao-e-feeds`.
-  - Plataformas multiuso (ex.: VirusTotal, Censys) ficam na categoria do uso mais comum e recebem as demais como tags.
-- **`malware` × `analise-de-urls-e-arquivos`:** bases organizadas por família de malware vão para `malware`; serviços em que você submete um artefato para análise (sandboxes, scanners) vão para `analise-de-urls-e-arquivos`.
-- **`malware` × `atores`:** classifique pelo eixo principal do recurso. Se ele é organizado por família de malware, use `malware`; se é organizado por grupo de ameaça, use `atores`. Bases que cobrem os dois igualmente ficam na categoria de maior uso e recebem a tag da outra.
-- **`ferramentas` × `padroes`:** se o recurso é algo que se instala ou executa, use `ferramentas`; se é uma especificação, um formato ou uma linguagem, use `padroes`. Exemplo: YARA, a linguagem de regras, vai para `padroes`; um scanner que executa regras YARA vai para `ferramentas`.
+- Em caso de dúvida, classifique pelo **uso principal do recurso no trabalho de CTI**, não por quem o publica. Exemplo: a CISA KEV é publicada por um órgão de governo dos EUA, mas entra em `vulnerabilidade`, não em `ecossistema` (reservada a instituições, normas e políticas do Brasil).
+- Recursos brasileiros que se encaixam claramente em outra categoria ficam nela, com a tag `brasil`. Exemplo: um feed de indicadores publicado por um CSIRT brasileiro iria para `ioc`. A categoria `ecossistema` é para instituições, normas e políticas do Brasil.
+- **Categorias de infraestrutura** (`varredura`, `ip`, `dominio`): classifique pela **pergunta que o recurso responde melhor**.
+  - "O que está rodando neste IP, ou ele é só ruído de varredura em massa?" → `varredura`.
+  - "A quem pertence este IP e por onde ele é roteado?" → `ip`.
+  - "Quem é dono deste domínio e o que mais está ligado a ele?" → `dominio`.
+  - Plataformas multiuso (ex.: Censys) ficam na categoria do uso mais comum e recebem as demais como tags.
+- **`malware` × `ioc`:** bases e feeds organizados por família de malware vão para `malware` (mesmo quando o conteúdo são IOCs, como ThreatFox e URLhaus); feeds e plataformas de IOC multi-fonte, não organizados por família, vão para `ioc` (AbuseIPDB, AlienVault OTX, Pulsedive, VirusTotal).
+- **`malware` × `ator`:** classifique pelo eixo principal do recurso. Se ele é organizado por família de malware, use `malware`; se é organizado por grupo de ameaça, use `ator`. Bases que cobrem os dois igualmente ficam na categoria de maior uso e recebem a tag da outra.
+- **`ator` × `ransomware`:** grupos cuja atividade principal é ransomware (extorsão por criptografia e/ou vazamento de dados) vão para `ransomware`; catálogos genéricos de grupos de ameaça, mesmo que incluam grupos de ransomware entre outros, ficam em `ator`.
+- **`ator` × `hacktivismo`:** grupos cuja motivação principal é ideológica ou política (não financeira) vão para `hacktivismo`; os demais grupos de ameaça ficam em `ator`.
+- **`ransomware` × `vazamentos`:** recursos focados em um grupo de ransomware específico (perfil, vítimas atribuídas, TTPs) vão para `ransomware`; recursos focados no vazamento ou no fórum/mercado em si, independente da origem, vão para `vazamentos`.
+- **`ioc` × `vazamentos`:** feeds de IOC compartilhados pela comunidade (IPs, domínios, hashes) vão para `ioc`; monitoramento de vazamentos de dados, credenciais e atividade em fóruns da dark web vai para `vazamentos`.
+- **Especificações, formatos e linguagens (ex.: STIX, YARA, Sigma) não entram no catálogo de recursos.** Elas ficam só nos verbetes (ex.: [YARA](docs/verbetes/yara.md), [Sigma](docs/verbetes/sigma.md), [STIX](docs/verbetes/stix.md)). Um recurso só vai para `ferramenta` se for algo que se instala ou executa — por exemplo, um scanner que executa regras YARA vai para `ferramenta`, mas a linguagem YARA em si não entra no catálogo.
 
 Ao adicionar ou alterar campos, atualize também `schemas/recursos.schema.json`.
 

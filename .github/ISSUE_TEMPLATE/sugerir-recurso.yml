@@ -40,19 +40,18 @@ body:
       label: Categoria
       description: Escolha a categoria principal (uso mais comum do recurso em CTI).
       options:
-        - frameworks-e-modelos
-        - varredura-de-internet
-        - ips-e-asns
-        - dns-e-dominios
-        - analise-de-urls-e-arquivos
-        - reputacao-e-feeds
+        - varredura
+        - ip
+        - dominio
+        - ioc
         - malware
-        - atores
-        - vulnerabilidades
-        - ferramentas
-        - padroes
-        - ecossistema-brasileiro
-        - aprendizado
+        - ator
+        - ransomware
+        - hacktivismo
+        - vazamentos
+        - vulnerabilidade
+        - ferramenta
+        - ecossistema
     validations:
       required: true
 

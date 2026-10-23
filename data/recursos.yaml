@@ -1,22 +1,10 @@
-- nome: MITRE ATT&CK
-  url: https://attack.mitre.org/
-  descricao: >-
-    Base de conhecimento pública de táticas, técnicas e procedimentos (TTPs)
-    de adversários, usada para descrever e classificar comportamentos de
-    ataque de forma padronizada.
-  categoria: frameworks-e-modelos
-  idioma: [en]
-  fase_ciclo: [analise, disseminacao]
-  tags: [ttps, matriz, mitre]
-  verificado_em: 2026-10-23
-
 - nome: Shodan
   url: https://www.shodan.io/
   descricao: >-
     Mecanismo de busca que varre a internet e indexa serviços expostos
     (portas, banners, certificados) por IP, usado para mapear e pivotar
     sobre infraestrutura exposta, como servidores de C2 e phishing.
-  categoria: varredura-de-internet
+  categoria: varredura
   idioma: [en]
   fase_ciclo: [coleta]
   tags: [osint, infraestrutura, pivotagem]
@@ -28,7 +16,7 @@
     Mecanismo de busca sobre logs de Certificate Transparency (CT), usado
     para descobrir domínios e subdomínios relacionados a partir de
     certificados emitidos.
-  categoria: dns-e-dominios
+  categoria: dominio
   idioma: [en]
   fase_ciclo: [coleta]
   tags: [certificate-transparency, subdominios, osint]
@@ -39,7 +27,7 @@
   descricao: >-
     Serviço que analisa arquivos, URLs, domínios e IPs submetidos pelo
     usuário, agregando veredito de dezenas de motores antivírus e sandboxes.
-  categoria: analise-de-urls-e-arquivos
+  categoria: ioc
   idioma: [en]
   fase_ciclo: [processamento, analise]
   tags: [sandbox, hash, triagem, reputacao, multiuso]
@@ -51,69 +39,10 @@
     Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no
     Brasil, mantido pelo NIC.br. Trata incidentes de segurança envolvendo
     redes brasileiras e publica estatísticas, alertas e recomendações.
-  categoria: ecossistema-brasileiro
+  categoria: ecossistema
   idioma: [pt]
   fase_ciclo: [disseminacao]
   tags: [csirt, brasil]
-  verificado_em: 2026-10-23
-
-- nome: MITRE D3FEND
-  url: https://d3fend.mitre.org/
-  descricao: >-
-    Grafo de conhecimento de contramedidas defensivas mantido pela MITRE,
-    complementar ao ATT&CK, relacionando técnicas de defesa às táticas
-    ofensivas que elas mitigam.
-  categoria: frameworks-e-modelos
-  idioma: [en]
-  fase_ciclo: [analise, disseminacao]
-  tags: [mitre, defesa, contramedidas]
-  verificado_em: 2026-10-23
-
-- nome: MITRE ATLAS
-  url: https://atlas.mitre.org/
-  descricao: >-
-    Base de conhecimento da MITRE sobre táticas e técnicas de ataque contra
-    sistemas de inteligência artificial, estruturada no mesmo formato do
-    ATT&CK.
-  categoria: frameworks-e-modelos
-  idioma: [en]
-  fase_ciclo: [analise, disseminacao]
-  tags: [mitre, ia, machine-learning]
-  verificado_em: 2026-10-23
-
-- nome: Cyber Kill Chain (Lockheed Martin)
-  url: https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
-  descricao: >-
-    Página oficial da Lockheed Martin sobre o modelo Cadeia de Ataque
-    Cibernética (Cyber Kill Chain), que descreve uma intrusão como sete
-    fases sequenciais de ataque.
-  categoria: frameworks-e-modelos
-  idioma: [en]
-  fase_ciclo: [analise]
-  tags: [kill-chain, lockheed-martin]
-  verificado_em: 2026-10-23
-
-- nome: Pyramid of Pain (post original)
-  url: https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html
-  descricao: >-
-    Post original de David Bianco propondo a Pirâmide da Dor, que classifica
-    indicadores pelo custo que impõem ao adversário quando detectados.
-  categoria: frameworks-e-modelos
-  idioma: [en]
-  fase_ciclo: [analise]
-  tags: [pyramid-of-pain, indicadores]
-  verificado_em: 2026-10-23
-
-- nome: Traffic Light Protocol (TLP)
-  url: https://www.first.org/tlp/
-  descricao: >-
-    Especificação oficial do Protocolo de Semáforo (TLP) 2.0, mantida pelo
-    FIRST, para classificar como informações sensíveis podem ser
-    compartilhadas.
-  categoria: frameworks-e-modelos
-  idioma: [en]
-  fase_ciclo: [disseminacao]
-  tags: [tlp, compartilhamento, first]
   verificado_em: 2026-10-23
 
 - nome: Censys
@@ -121,7 +50,7 @@
   descricao: >-
     Mecanismo de busca e mapeamento de ativos expostos na internet (hosts,
     certificados, serviços), com camada gratuita limitada.
-  categoria: varredura-de-internet
+  categoria: varredura
   idioma: [en]
   fase_ciclo: [coleta]
   tags: [osint, infraestrutura, certificados]
@@ -132,7 +61,7 @@
   descricao: >-
     Mecanismo de busca chinês para mapeamento de ativos expostos na internet
     (IPs, domínios, portas, certificados), com busca básica gratuita.
-  categoria: varredura-de-internet
+  categoria: varredura
   idioma: [en, zh]
   fase_ciclo: [coleta]
   tags: [osint, infraestrutura]
@@ -143,7 +72,7 @@
   descricao: >-
     Conjunto de ferramentas web gratuitas para consultar ASN, prefixos IP,
     peering e histórico de anúncios BGP, sem necessidade de cadastro.
-  categoria: ips-e-asns
+  categoria: ip
   idioma: [en]
   fase_ciclo: [coleta]
   tags: [bgp, asn, roteamento]
@@ -154,7 +83,7 @@
   descricao: >-
     Serviço de dados e visualizações do RIPE NCC sobre endereçamento IP e
     ASNs, incluindo titularidade, roteamento e validação RPKI.
-  categoria: ips-e-asns
+  categoria: ip
   idioma: [en]
   fase_ciclo: [coleta]
   tags: [ripe-ncc, asn, rpki]
@@ -165,7 +94,7 @@
   descricao: >-
     Serviço de geolocalização e dados de ASN por IP, com camada gratuita
     (IPinfo Lite) sem limite de consultas para dados de país e ASN.
-  categoria: ips-e-asns
+  categoria: ip
   idioma: [en]
   fase_ciclo: [coleta, processamento]
   tags: [geolocalizacao, asn, api]
@@ -176,7 +105,7 @@
   descricao: >-
     Serviço gratuito de mapeamento de IP para ASN via WHOIS, DNS ou HTTPS,
     útil para pivotar rapidamente de um IP para o ASN de origem.
-  categoria: ips-e-asns
+  categoria: ip
   idioma: [en]
   fase_ciclo: [coleta]
   tags: [asn, whois, dns]
@@ -187,7 +116,7 @@
   descricao: >-
     Plataforma de inteligência de DNS e domínios, com histórico de registros
     DNS e WHOIS; a conta gratuita tem acesso limitado ao histórico.
-  categoria: dns-e-dominios
+  categoria: dominio
   idioma: [en]
   fase_ciclo: [coleta]
   tags: [dns-passivo, whois, historico]
@@ -199,7 +128,7 @@
     Ferramenta gratuita de reconhecimento de domínios que agrega
     subdomínios e hosts relacionados a partir de logs de certificate
     transparency e outras fontes.
-  categoria: dns-e-dominios
+  categoria: dominio
   idioma: [en]
   fase_ciclo: [coleta]
   tags: [subdominios, certificate-transparency]
@@ -210,7 +139,7 @@
   descricao: >-
     Coleção de ferramentas gratuitas de DNS, incluindo reverse IP lookup,
     verificação de propagação e histórico de WHOIS.
-  categoria: dns-e-dominios
+  categoria: dominio
   idioma: [en]
   fase_ciclo: [coleta]
   tags: [reverse-ip, whois]
@@ -222,7 +151,7 @@
     Sandbox gratuito que navega até uma URL submetida, registra domínios e
     IPs contatados, DOM, cookies e captura de tela, sinalizando sites
     potencialmente maliciosos.
-  categoria: analise-de-urls-e-arquivos
+  categoria: malware
   idioma: [en]
   fase_ciclo: [processamento, analise]
   tags: [sandbox, screenshot, triagem]
@@ -234,7 +163,7 @@
     Sandbox gratuito de análise de malware mantido pela CrowdStrike,
     baseado em uma versão reduzida do Falcon Sandbox, com submissão
     pública de amostras.
-  categoria: analise-de-urls-e-arquivos
+  categoria: malware
   idioma: [en]
   fase_ciclo: [processamento, analise]
   tags: [sandbox, crowdstrike, malware]
@@ -246,7 +175,7 @@
     Sandbox interativo de análise de malware que permite ao analista
     interagir em tempo real com a amostra em execução; versão gratuita com
     recursos limitados.
-  categoria: analise-de-urls-e-arquivos
+  categoria: malware
   idioma: [en]
   fase_ciclo: [processamento, analise]
   tags: [sandbox, interativo]
@@ -258,7 +187,7 @@
     Serviço que classifica IPs que varrem indiscriminadamente a internet,
     ajudando a separar ruído de varredura em massa de tráfego malicioso
     direcionado; tem busca gratuita.
-  categoria: reputacao-e-feeds
+  categoria: varredura
   idioma: [en]
   fase_ciclo: [processamento, analise]
   tags: [ruido, scanners, enriquecimento]
@@ -269,7 +198,7 @@
   descricao: >-
     Base colaborativa de denúncias de IPs maliciosos, com pontuação de
     confiança de abuso por IP; consulta via API gratuita com limite diário.
-  categoria: reputacao-e-feeds
+  categoria: ioc
   idioma: [en]
   fase_ciclo: [processamento]
   tags: [reputacao-de-ip, comunidade]
@@ -280,7 +209,7 @@
   descricao: >-
     Plataforma comunitária e gratuita de compartilhamento de indicadores
     de comprometimento, organizados em "pulses" por ameaça.
-  categoria: reputacao-e-feeds
+  categoria: ioc
   idioma: [en]
   fase_ciclo: [coleta, disseminacao]
   tags: [ioc, comunidade, pulses]
@@ -291,7 +220,7 @@
   descricao: >-
     Plataforma de threat intelligence que agrega, enriquece e correlaciona
     indicadores de IPs, domínios e URLs a partir de feeds da comunidade.
-  categoria: reputacao-e-feeds
+  categoria: ioc
   idioma: [en]
   fase_ciclo: [processamento, analise]
   tags: [enriquecimento, comunidade]
@@ -347,7 +276,7 @@
   descricao: >-
     Seção do MITRE ATT&CK com perfis de grupos de ameaça, apelidos entre
     fornecedores, TTPs associadas e histórico de campanhas atribuídas.
-  categoria: atores
+  categoria: ator
   idioma: [en]
   fase_ciclo: [analise, disseminacao]
   tags: [mitre, perfis, ttps]
@@ -358,7 +287,7 @@
   descricao: >-
     Cluster "threat-actor" do MISP Galaxy, um catálogo aberto (licença CC0)
     de grupos de ameaça mantido pela comunidade MISP/CIRCL.
-  categoria: atores
+  categoria: ator
   idioma: [en]
   fase_ciclo: [analise, disseminacao]
   tags: [misp, circl, codigo-aberto]
@@ -370,7 +299,7 @@
     Plataforma independente e gratuita que rastreia grupos de ransomware e
     suas vítimas a partir de sites de vazamento de dados, com mapeamento
     para o MITRE ATT&CK.
-  categoria: atores
+  categoria: ransomware
   idioma: [en]
   fase_ciclo: [coleta, disseminacao]
   tags: [ransomware, vazamentos]
@@ -382,7 +311,7 @@
     Base de vulnerabilidades mantida pelo NIST, construída sobre o padrão
     CVE, com métricas de severidade (CVSS), tipo de fraqueza (CWE) e
     aplicabilidade (CPE).
-  categoria: vulnerabilidades
+  categoria: vulnerabilidade
   idioma: [en]
   fase_ciclo: [processamento, analise]
   tags: [cve, cvss, nist]
@@ -393,7 +322,7 @@
   descricao: >-
     Site oficial do CVE Program, mantido pela MITRE, para identificação e
     catalogação pública de vulnerabilidades.
-  categoria: vulnerabilidades
+  categoria: vulnerabilidade
   idioma: [en]
   fase_ciclo: [processamento]
   tags: [cve, mitre]
@@ -405,7 +334,7 @@
     Catálogo mantido pela CISA com vulnerabilidades confirmadamente
     exploradas em ataques reais, usado como insumo para priorização de
     correções.
-  categoria: vulnerabilidades
+  categoria: vulnerabilidade
   idioma: [en]
   fase_ciclo: [analise]
   tags: [cisa, priorizacao, exploracao-ativa]
@@ -417,7 +346,7 @@
     Modelo mantido pelo FIRST que estima a probabilidade de uma
     vulnerabilidade divulgada ser explorada nos próximos 30 dias,
     complementar ao CVSS.
-  categoria: vulnerabilidades
+  categoria: vulnerabilidade
   idioma: [en]
   fase_ciclo: [analise]
   tags: [first, priorizacao, scoring]
@@ -429,7 +358,7 @@
     Plataforma open source de threat intelligence para coletar, armazenar,
     correlacionar e compartilhar indicadores de comprometimento entre
     organizações.
-  categoria: ferramentas
+  categoria: ferramenta
   idioma: [en]
   fase_ciclo: [coleta, processamento, disseminacao]
   tags: [tip, codigo-aberto, circl]
@@ -441,7 +370,7 @@
     Plataforma open source de threat intelligence mantida pela Filigran,
     que estrutura dados de CTI segundo o padrão STIX2 e integra com MISP e
     TheHive.
-  categoria: ferramentas
+  categoria: ferramenta
   idioma: [en]
   fase_ciclo: [processamento, analise]
   tags: [tip, stix2, codigo-aberto]
@@ -453,7 +382,7 @@
     Aplicação web do GCHQ para codificar, decodificar, criptografar e
     analisar dados através de "receitas" de operações encadeadas,
     processadas localmente no navegador.
-  categoria: ferramentas
+  categoria: ferramenta
   idioma: [en]
   fase_ciclo: [processamento]
   tags: [gchq, codificacao, hashing]
@@ -465,58 +394,10 @@
     Motor open source de IDS, IPS e monitoramento de segurança de rede,
     mantido pela fundação sem fins lucrativos OISF, com regras compatíveis
     com Snort.
-  categoria: ferramentas
+  categoria: ferramenta
   idioma: [en]
   fase_ciclo: [coleta, processamento]
   tags: [ids, ips, oisf]
-  verificado_em: 2026-10-23
-
-- nome: STIX
-  url: https://oasis-open.github.io/cti-documentation/
-  descricao: >-
-    Linguagem e formato de serialização para representar e trocar
-    inteligência de ameaças cibernéticas, padronizado pelo comitê CTI da
-    OASIS.
-  categoria: padroes
-  idioma: [en]
-  fase_ciclo: [processamento, disseminacao]
-  tags: [oasis, stix2, interoperabilidade]
-  verificado_em: 2026-10-23
-
-- nome: TAXII
-  url: https://oasis-open.github.io/cti-documentation/
-  descricao: >-
-    Mecanismo de transporte padronizado pela OASIS para a troca
-    automatizada de inteligência de ameaças no formato STIX entre
-    organizações.
-  categoria: padroes
-  idioma: [en]
-  fase_ciclo: [disseminacao]
-  tags: [oasis, stix, automacao]
-  verificado_em: 2026-10-23
-
-- nome: YARA
-  url: https://yara.readthedocs.io/
-  descricao: >-
-    Documentação oficial da linguagem de regras YARA, usada para
-    identificar e classificar amostras de malware a partir de padrões
-    textuais ou binários.
-  categoria: padroes
-  idioma: [en]
-  fase_ciclo: [processamento, analise]
-  tags: [yara, regras, virustotal]
-  verificado_em: 2026-10-23
-
-- nome: Sigma
-  url: https://sigmahq.io/
-  descricao: >-
-    Formato genérico e aberto de regras de detecção para logs, mantido
-    pela SigmaHQ, convertido para a linguagem de consulta de diferentes
-    SIEMs por meio de "backends".
-  categoria: padroes
-  idioma: [en]
-  fase_ciclo: [processamento, disseminacao]
-  tags: [sigmahq, siem, deteccao]
   verificado_em: 2026-10-23
 
 - nome: CTIR Gov
@@ -525,7 +406,7 @@
     Centro de Prevenção, Tratamento e Resposta a Incidentes Cibernéticos de
     Governo, vinculado ao GSI/PR, responsável por coordenar a resposta a
     incidentes na administração pública federal brasileira.
-  categoria: ecossistema-brasileiro
+  categoria: ecossistema
   idioma: [pt]
   fase_ciclo: [disseminacao]
   tags: [governo, brasil]
@@ -537,42 +418,22 @@
     Centro de Atendimento a Incidentes de Segurança da RNP (Rede Nacional
     de Ensino e Pesquisa), um dos primeiros CSIRTs do Brasil, atuante na
     rede acadêmica nacional.
-  categoria: ecossistema-brasileiro
+  categoria: ecossistema
   idioma: [pt]
   fase_ciclo: [disseminacao]
   tags: [csirt, academico, brasil]
   verificado_em: 2026-10-23
 
-- nome: SANS Internet Storm Center
-  url: https://isc.sans.edu/
+- nome: Analyzer (VECERT)
+  url: https://analyzer.vecert.io/
   descricao: >-
-    Diário gratuito mantido por handlers voluntários do SANS, publicando
-    análises diárias de ameaças e eventos de segurança na internet.
-  categoria: aprendizado
+    Plataforma de monitoramento de vazamentos de dados e de atividade em
+    fóruns da dark web, mantida pela VECERT, com mapa de publicações por
+    país, feed normalizado (autor, data, fonte), painéis dedicados a
+    ransomware e defacement, consulta de domínio/URL e geração automática
+    de relatórios por IA.
+  categoria: vazamentos
   idioma: [en]
-  fase_ciclo: [disseminacao]
-  tags: [sans, blog, atualidade]
-  verificado_em: 2026-10-23
-
-- nome: The DFIR Report
-  url: https://thedfirreport.com/
-  descricao: >-
-    Blog gratuito com relatórios técnicos detalhados de intrusões reais, do
-    acesso inicial à ação final do adversário, voltado a analistas de
-    resposta a incidentes.
-  categoria: aprendizado
-  idioma: [en]
-  fase_ciclo: [disseminacao]
-  tags: [relatorios, intrusao, blog]
-  verificado_em: 2026-10-23
-
-- nome: Risky Business
-  url: https://risky.biz/
-  descricao: >-
-    Podcast semanal gratuito de notícias e entrevistas sobre segurança da
-    informação, no ar desde 2007.
-  categoria: aprendizado
-  idioma: [en]
-  fase_ciclo: [disseminacao]
-  tags: [podcast, noticias]
+  fase_ciclo: [coleta, analise]
+  tags: [darkweb, forums, ransomware, defacement]
   verificado_em: 2026-10-23

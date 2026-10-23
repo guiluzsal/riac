@@ -42,19 +42,18 @@
           "type": "string",
           "description": "Categoria principal do recurso. Cada recurso tem exatamente uma categoria; use tags para aspectos secundários.",
           "enum": [
-            "frameworks-e-modelos",
-            "varredura-de-internet",
-            "ips-e-asns",
-            "dns-e-dominios",
-            "analise-de-urls-e-arquivos",
-            "reputacao-e-feeds",
+            "varredura",
+            "ip",
+            "dominio",
+            "ioc",
             "malware",
-            "atores",
-            "vulnerabilidades",
-            "ferramentas",
-            "padroes",
-            "ecossistema-brasileiro",
-            "aprendizado"
+            "ator",
+            "ransomware",
+            "hacktivismo",
+            "vazamentos",
+            "vulnerabilidade",
+            "ferramenta",
+            "ecossistema"
           ]
         },
         "idioma": {
