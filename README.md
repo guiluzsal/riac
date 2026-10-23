@@ -15,8 +15,8 @@ GitHub.
   metadados estruturados.
 - Verbetes explicativos sobre conceitos, modelos e práticas de CTI.
 - Glossário bilíngue EN↔PT com justificativa de tradução.
-- Conteúdo dedicado ao contexto lusófono (CERT.br, CTIR Gov, CAIS/RNP, CNCS,
-  CERT.PT, legislação brasileira relevante).
+- Conteúdo dedicado ao contexto brasileiro (CERT.br, CTIR Gov, CAIS/RNP,
+  legislação brasileira relevante).
 
 Veja o escopo completo, as convenções de conteúdo e o roadmap em
 [`CLAUDE.md`](CLAUDE.md).

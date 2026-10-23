@@ -53,7 +53,7 @@
             "vulnerabilidades",
             "ferramentas",
             "padroes",
-            "ecossistema-lusofono",
+            "ecossistema-brasileiro",
             "aprendizado"
           ]
         },
@@ -91,7 +91,7 @@
             "type": "string",
             "minLength": 1
           },
-          "description": "Tags livres para aspectos secundários (ex.: categorias alternativas, lusofono)."
+          "description": "Tags livres para aspectos secundários (ex.: categorias alternativas, brasil)."
         },
         "verificado_em": {
           "type": "string",

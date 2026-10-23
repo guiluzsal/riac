@@ -1,7 +1,7 @@
 # Configuração do lychee (verificador de links) usada em
 # .github/workflows/qualidade.yml.
 
-exclude_path = [".venv", "site", "node_modules", "Cronograma.md"]
+exclude_path = [".venv", "site", "node_modules"]
 
 # apps.dtic.mil bloqueia requisições automatizadas com 403, mesmo quando o
 # link funciona normalmente em um navegador (verificado manualmente em
@@ -22,19 +22,12 @@ exclude_path = [".venv", "site", "node_modules", "Cronograma.md"]
 # com 403 (confirmado tanto pelo lychee quanto por uma checagem manual
 # separada em 2026-10-23), mesmo sendo sites válidos e normalmente
 # acessíveis em um navegador.
-#
-# cncs.gov.pt derruba a conexão (connection reset) em requisições
-# automatizadas — confirmado em duas execuções reais consecutivas do
-# workflow Qualidade em 2026-10-23 (runs 39972394231 e anterior). Exclui
-# o domínio inteiro, já que tanto a entrada do CNCS quanto a do CERT.PT
-# apontam para cncs.gov.pt.
 exclude = [
   "^https://apps\\.dtic\\.mil/",
   "^https://www\\.shodan\\.io/",
   "^https://guiluzsal\\.github\\.io/riac/",
   "^https://securitytrails\\.com/",
   "^https://www\\.abuseipdb\\.com/",
-  "^https://www\\.cncs\\.gov\\.pt/",
 ]
 
 accept = [200, 201, 202, 203, 204, 206, 301, 302, 303, 307, 308]

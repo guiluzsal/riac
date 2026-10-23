@@ -51,10 +51,10 @@
     Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no
     Brasil, mantido pelo NIC.br. Trata incidentes de segurança envolvendo
     redes brasileiras e publica estatísticas, alertas e recomendações.
-  categoria: ecossistema-lusofono
+  categoria: ecossistema-brasileiro
   idioma: [pt]
   fase_ciclo: [disseminacao]
-  tags: [lusofono, csirt, brasil]
+  tags: [csirt, brasil]
   verificado_em: 2026-10-23
 
 - nome: MITRE D3FEND
@@ -525,10 +525,10 @@
     Centro de Prevenção, Tratamento e Resposta a Incidentes Cibernéticos de
     Governo, vinculado ao GSI/PR, responsável por coordenar a resposta a
     incidentes na administração pública federal brasileira.
-  categoria: ecossistema-lusofono
+  categoria: ecossistema-brasileiro
   idioma: [pt]
   fase_ciclo: [disseminacao]
-  tags: [lusofono, governo, brasil]
+  tags: [governo, brasil]
   verificado_em: 2026-10-23
 
 - nome: CAIS/RNP
@@ -537,34 +537,10 @@
     Centro de Atendimento a Incidentes de Segurança da RNP (Rede Nacional
     de Ensino e Pesquisa), um dos primeiros CSIRTs do Brasil, atuante na
     rede acadêmica nacional.
-  categoria: ecossistema-lusofono
+  categoria: ecossistema-brasileiro
   idioma: [pt]
   fase_ciclo: [disseminacao]
-  tags: [lusofono, csirt, academico, brasil]
-  verificado_em: 2026-10-23
-
-- nome: CNCS (Centro Nacional de Cibersegurança)
-  url: https://www.cncs.gov.pt/
-  descricao: >-
-    Autoridade nacional de cibersegurança de Portugal, responsável pela
-    coordenação operacional de entidades do Estado, infraestruturas
-    críticas e operadores de serviços essenciais.
-  categoria: ecossistema-lusofono
-  idioma: [pt]
-  fase_ciclo: [disseminacao]
-  tags: [lusofono, governo, portugal]
-  verificado_em: 2026-10-23
-
-- nome: CERT.PT
-  url: https://www.cncs.gov.pt/pt/certpt/
-  descricao: >-
-    Equipa nacional de resposta a incidentes de segurança de Portugal,
-    operada pelo CNCS, com âmbito sobre entidades do Estado,
-    infraestruturas críticas e o ciberespaço português em geral.
-  categoria: ecossistema-lusofono
-  idioma: [pt]
-  fase_ciclo: [disseminacao]
-  tags: [lusofono, csirt, portugal]
+  tags: [csirt, academico, brasil]
   verificado_em: 2026-10-23
 
 - nome: SANS Internet Storm Center

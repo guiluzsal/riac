@@ -6,7 +6,6 @@
     ".venv/**",
     "site/**",
     "node_modules/**",
-    "Cronograma.md",
     "CLAUDE.md"
   ],
   "words": [
@@ -19,7 +18,6 @@
     "dominios",
     "reputacao",
     "padroes",
-    "lusofono",
     "asns",
     "intrusao",
     "exfiltração",
@@ -45,7 +43,6 @@
     "CSIRT",
     "CSIRTs",
     "LGPD",
-    "CNCS",
     "CTIR",
     "ETDA",
     "IPDB",

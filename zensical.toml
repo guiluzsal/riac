@@ -23,7 +23,7 @@ nav = [
       { "Vulnerabilidades" = "recursos/vulnerabilidades.md" },
       { "Ferramentas" = "recursos/ferramentas.md" },
       { "Padrões" = "recursos/padroes.md" },
-      { "Ecossistema lusófono" = "recursos/ecossistema-lusofono.md" },
+      { "Ecossistema brasileiro" = "recursos/ecossistema-brasileiro.md" },
       { "Aprendizado" = "recursos/aprendizado.md" },
   ] },
   { "Verbetes" = [

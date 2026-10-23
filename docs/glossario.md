@@ -1,9 +1,10 @@
 # Glossário EN↔PT
 
-Termos técnicos de Cyber Threat Intelligence (CTI), com a tradução
-recomendada para português do Brasil e a justificativa da escolha. Quando
-um termo já circula amplamente em inglês na comunidade lusófona de CTI,
-isso é indicado para que você possa reconhecê-lo em ambas as formas.
+Termos técnicos de Inteligência de Ameaças Cibernéticas (CTI), com a
+tradução recomendada para português do Brasil e a justificativa da
+escolha. Quando um termo já circula amplamente em inglês na comunidade
+brasileira de CTI, isso é indicado para que você possa reconhecê-lo em
+ambas as formas.
 
 | Termo (EN) | Termo (PT) | Justificativa |
 |---|---|---|

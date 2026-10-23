@@ -6,7 +6,7 @@ Este arquivo orienta o Claude Code no desenvolvimento do RIAC. Leia-o inteiro an
 O RIAC é uma plataforma colaborativa e aberta, em português, que reúne recursos e verbetes sobre Cyber Threat Intelligence (CTI). Ela recebe contribuições da comunidade via GitHub.
 
 - Idioma do conteúdo, dos commits, das issues e dos comentários: **português do Brasil**.
-- Público-alvo: analistas de CTI de todos os níveis, com atenção especial a iniciantes.
+- Público-alvo: analistas de CTI brasileiros de todos os níveis, com atenção especial a iniciantes.
 
 ## Escopo
 
@@ -14,10 +14,9 @@ O RIAC é uma plataforma colaborativa e aberta, em português, que reúne recurs
 - **Catálogo de recursos:** links curados para ferramentas, bases e referências de CTI, com descrição em português e metadados.
 - **Verbetes:** artigos explicativos sobre conceitos, modelos e práticas de CTI.
 - **Glossário bilíngue EN↔PT:** cada termo traz a tradução recomendada e a justificativa.
-- **Contexto lusófono:**
+- **Contexto brasileiro:**
   - CERT.br, CTIR Gov e CAIS/RNP;
   - legislação brasileira relevante;
-  - CNCS e CERT.PT;
   - ameaças que atingem o Brasil.
 - **Templates operacionais em PT:** relatório de inteligência, RFI, PIRs e perfil de ator.
 - **Trilhas de aprendizado** por nível (fase 2).
@@ -133,13 +132,13 @@ Categorias válidas (use exatamente estes slugs no campo `categoria`):
 | `vulnerabilidades` | Fontes para identificar, priorizar e acompanhar vulnerabilidades e sua exploração ativa. | NVD, CVE.org, CISA KEV, EPSS, Exploit-DB |
 | `ferramentas` | Software que o analista instala ou opera: plataformas de inteligência (TIPs), gestão de casos, análise e detecção. | MISP, OpenCTI, TheHive/Cortex, CyberChef, Suricata, Zeek |
 | `padroes` | Especificações, formatos e linguagens para representar, trocar e operacionalizar inteligência. | STIX, TAXII, Sigma, YARA, OpenIOC |
-| `ecossistema-lusofono` | Instituições, normas e fontes do Brasil e de países lusófonos: CSIRTs nacionais, órgãos de governo, legislação e políticas de cibersegurança. É o diferencial do RIAC. | CERT.br, CTIR Gov, CAIS/RNP, Política Nacional de Cibersegurança, LGPD, Marco Civil da Internet, CNCS, CERT.PT |
+| `ecossistema-brasileiro` | Instituições, normas e fontes do Brasil: CSIRTs nacionais, órgãos de governo, legislação e políticas de cibersegurança. É o diferencial do RIAC. | CERT.br, CTIR Gov, CAIS/RNP, Política Nacional de Cibersegurança, LGPD, Marco Civil da Internet |
 | `aprendizado` | Material para formação de analistas: cursos, livros, currículos, podcasts, blogs de times de CTI e listas de leitura. | Currículo do FIRST CTI SIG, cursos gratuitos de CTI, blogs de fornecedores, podcasts de threat intel |
 
 Regras de classificação:
 - Cada recurso tem **uma** categoria principal. Use `tags` para aspectos secundários.
 - Em caso de dúvida, classifique pelo **uso principal do recurso no trabalho de CTI**, não por quem o publica. Exemplo: o ATT&CK é publicado pela MITRE, mas entra em `frameworks-e-modelos`.
-- Recursos lusófonos que se encaixam claramente em outra categoria ficam nela, com a tag `lusofono`. Exemplo: um feed de indicadores publicado por um CSIRT brasileiro iria para `reputacao-e-feeds`. A categoria `ecossistema-lusofono` é para instituições, normas e políticas.
+- Recursos brasileiros que se encaixam claramente em outra categoria ficam nela, com a tag `brasil`. Exemplo: um feed de indicadores publicado por um CSIRT brasileiro iria para `reputacao-e-feeds`. A categoria `ecossistema-brasileiro` é para instituições, normas e políticas.
 - **Categorias de infraestrutura** (`varredura-de-internet`, `ips-e-asns`, `dns-e-dominios`, `analise-de-urls-e-arquivos`, `reputacao-e-feeds`): classifique pela **pergunta que o recurso responde melhor**.
   - "O que está rodando neste IP?" → `varredura-de-internet`.
   - "A quem pertence este IP e por onde ele é roteado?" → `ips-e-asns`.

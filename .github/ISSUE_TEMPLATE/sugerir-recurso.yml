@@ -51,7 +51,7 @@ body:
         - vulnerabilidades
         - ferramentas
         - padroes
-        - ecossistema-lusofono
+        - ecossistema-brasileiro
         - aprendizado
     validations:
       required: true
