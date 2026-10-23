@@ -2,7 +2,7 @@
 tags: [frameworks-e-modelos, coleta]
 ---
 
-# OSINT (Open Source Intelligence)
+# Inteligência de Fontes Abertas (Open Source Intelligence, OSINT)
 
 **Definição:** inteligência produzida a partir de informação disponível
 publicamente — sites, redes sociais, registros públicos, dados técnicos

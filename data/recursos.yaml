@@ -84,8 +84,9 @@
 - nome: Cyber Kill Chain (Lockheed Martin)
   url: https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
   descricao: >-
-    Página oficial da Lockheed Martin sobre o modelo Cyber Kill Chain, que
-    descreve uma intrusão como sete fases sequenciais de ataque.
+    Página oficial da Lockheed Martin sobre o modelo Cadeia de Ataque
+    Cibernética (Cyber Kill Chain), que descreve uma intrusão como sete
+    fases sequenciais de ataque.
   categoria: frameworks-e-modelos
   idioma: [en]
   fase_ciclo: [analise]
@@ -106,7 +107,7 @@
 - nome: Traffic Light Protocol (TLP)
   url: https://www.first.org/tlp/
   descricao: >-
-    Especificação oficial do Traffic Light Protocol (TLP) 2.0, mantida pelo
+    Especificação oficial do Protocolo de Semáforo (TLP) 2.0, mantida pelo
     FIRST, para classificar como informações sensíveis podem ser
     compartilhadas.
   categoria: frameworks-e-modelos

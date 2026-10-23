@@ -2,7 +2,7 @@
 tags: [frameworks-e-modelos, compartilhamento]
 ---
 
-# Traffic Light Protocol (TLP)
+# Protocolo de Semáforo (Traffic Light Protocol, TLP)
 
 **Definição:** conjunto de quatro rótulos de cores que indicam até onde
 uma informação sensível pode ser compartilhada, usado para permitir a
@@ -34,14 +34,14 @@ fosse TLP:CLEAR.
 
 ## Relação com outros modelos (ATT&CK, Diamond Model, Kill Chain…)
 
-O TLP é usado em conjunto com o Permissible Actions Protocol
+O TLP é usado em conjunto com o Protocolo de Ações Permissíveis
 ([PAP](permissible-actions-protocol.md)): o TLP controla *quem* pode
 receber a informação, e o PAP controla *que ações* o receptor pode tomar
 com ela.
 
 ## Termos relacionados
 
-- [Permissible Actions Protocol (PAP)](permissible-actions-protocol.md)
+- [Protocolo de Ações Permissíveis (PAP)](permissible-actions-protocol.md)
 - [Admiralty Code](admiralty-code.md)
 
 ## Referências

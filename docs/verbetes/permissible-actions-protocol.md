@@ -2,7 +2,7 @@
 tags: [frameworks-e-modelos, compartilhamento]
 ---
 
-# Permissible Actions Protocol (PAP)
+# Protocolo de Ações Permissíveis (Permissible Actions Protocol, PAP)
 
 **Definição:** protocolo que indica quais ações um receptor pode tomar com
 uma informação de inteligência recebida, classificando o risco de revelar
@@ -38,7 +38,7 @@ recebe a informação, o PAP regula *o que* o receptor pode fazer com ela.
 
 ## Termos relacionados
 
-- [Traffic Light Protocol (TLP)](traffic-light-protocol.md)
+- [Protocolo de Semáforo (TLP)](traffic-light-protocol.md)
 
 ## Referências
 

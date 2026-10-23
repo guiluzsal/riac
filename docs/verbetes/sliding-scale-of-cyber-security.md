@@ -2,7 +2,7 @@
 tags: [frameworks-e-modelos, estrategia]
 ---
 
-# Sliding Scale of Cyber Security
+# Escala Deslizante de Segurança Cibernética (Sliding Scale of Cyber Security)
 
 **Definição:** modelo que organiza investimentos e ações de segurança em
 cinco categorias — Arquitetura, Defesa Passiva, Defesa Ativa, Inteligência

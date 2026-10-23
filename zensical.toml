@@ -39,8 +39,8 @@ nav = [
           { "MITRE ATLAS" = "verbetes/mitre-atlas.md" },
       ] },
       { "Compartilhamento e avaliação de fontes" = [
-          { "Traffic Light Protocol (TLP)" = "verbetes/traffic-light-protocol.md" },
-          { "Permissible Actions Protocol (PAP)" = "verbetes/permissible-actions-protocol.md" },
+          { "Protocolo de Semáforo (TLP)" = "verbetes/traffic-light-protocol.md" },
+          { "Protocolo de Ações Permissíveis (PAP)" = "verbetes/permissible-actions-protocol.md" },
           { "Admiralty Code" = "verbetes/admiralty-code.md" },
       ] },
       { "Padrões de detecção e troca" = [
@@ -51,10 +51,10 @@ nav = [
       ] },
       { "Conceitos e estratégia" = [
           { "Ameaça Persistente Avançada (APT)" = "verbetes/advanced-persistent-threat.md" },
-          { "Sliding Scale of Cyber Security" = "verbetes/sliding-scale-of-cyber-security.md" },
+          { "Escala Deslizante de Segurança Cibernética" = "verbetes/sliding-scale-of-cyber-security.md" },
           { "VERIS" = "verbetes/veris.md" },
           { "Indicador de Comprometimento (IOC)" = "verbetes/indicador-de-comprometimento.md" },
-          { "OSINT" = "verbetes/osint.md" },
+          { "Inteligência de Fontes Abertas (OSINT)" = "verbetes/osint.md" },
           { "EPSS" = "verbetes/epss.md" },
       ] },
   ] },

@@ -1,7 +1,7 @@
 # RIAC
 ---
 O RIAC é uma plataforma colaborativa e aberta, em português, que reúne
-recursos e verbetes sobre Cyber Threat Intelligence (CTI).
+recursos e verbetes sobre Inteligência de Ameaças Cibernéticas (CTI).
 
 Este site está em construção. Em breve você encontrará aqui:
 

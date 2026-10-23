@@ -41,7 +41,7 @@ e ação, não de confiabilidade da fonte.
 
 ## Termos relacionados
 
-- [Traffic Light Protocol (TLP)](traffic-light-protocol.md)
+- [Protocolo de Semáforo (TLP)](traffic-light-protocol.md)
 
 ## Referências
 

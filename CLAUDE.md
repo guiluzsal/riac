@@ -154,6 +154,14 @@ Regras de classificação:
 Ao adicionar ou alterar campos, atualize também `schemas/recursos.schema.json`.
 
 ## Regras de conteúdo (obrigatórias)
+- Sempre que um termo tiver entrada no [glossário](docs/glossario.md), use a forma em
+  português no corpo do texto (verbetes, catálogo, templates), não o termo em inglês —
+  um dos objetivos do RIAC é disseminar o uso desses termos em português. A sigla
+  consolidada (ex.: APT, IOC, TTPs) pode acompanhar entre parênteses na primeira
+  ocorrência, conforme o próprio glossário já faz. O termo em inglês continua a existir
+  no glossário e pode aparecer citado quando necessário (ex.: nome oficial de um
+  framework), mas não deve substituir a forma em português como escolha padrão de
+  texto corrido.
 - Só material **TLP:CLEAR**.
 - Nunca hospedar amostras de malware; apenas apontar para repositórios que já fazem isso com controles.
 - Citar fontes e respeitar licenças de terceiros. Exemplo: o MITRE ATT&CK pode ser reutilizado com atribuição.
