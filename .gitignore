@@ -7,6 +7,9 @@ __pycache__/
 site/
 .cache/
 
+# Dependências Node (usadas só pelo CI de qualidade, ver package.json)
+node_modules/
+
 # Editores e sistemas operacionais
 .DS_Store
 *.swp

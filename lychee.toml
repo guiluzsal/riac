@@ -1,0 +1,14 @@
+# Configuração do lychee (verificador de links) usada em
+# .github/workflows/qualidade.yml.
+
+exclude_path = [".venv", "site", "node_modules", "Cronograma.md"]
+
+# apps.dtic.mil bloqueia requisições automatizadas com 403, mesmo quando o
+# link funciona normalmente em um navegador (verificado manualmente em
+# 2026-10-23). Sem esta exclusão, o link do artigo original do Diamond
+# Model em docs/verbetes/diamond-model.md sempre falharia no CI.
+exclude = [
+  "^https://apps\\.dtic\\.mil/",
+]
+
+accept = [200, 201, 202, 203, 204, 206, 301, 302, 303, 307, 308]

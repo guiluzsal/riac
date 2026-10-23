@@ -55,6 +55,6 @@ estiver representando oficialmente o projeto em espaços públicos.
 
 Este Código de Conduta é adaptado do [Contributor Covenant][homepage],
 versão 2.1, disponível em
-https://www.contributor-covenant.org/pt-br/version/2/1/code_of_conduct.html.
+<https://www.contributor-covenant.org/pt-br/version/2/1/code_of_conduct.html>.
 
 [homepage]: https://www.contributor-covenant.org

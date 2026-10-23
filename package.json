@@ -1,0 +1,8 @@
+{
+  "name": "riac-qualidade",
+  "private": true,
+  "description": "Dependências Node usadas apenas pelo CI de qualidade (cspell). O site é gerado com Zensical/Python; isto não faz do RIAC um projeto Node.",
+  "devDependencies": {
+    "@cspell/dict-pt-br": "^2.4.4"
+  }
+}

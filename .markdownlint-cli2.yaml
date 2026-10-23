@@ -1,0 +1,15 @@
+config:
+  default: true
+  MD013: false # comprimento de linha: textos em pt-BR e URLs longas não se beneficiam de quebra em 80 colunas
+  MD060:
+    style: "padded" # tabelas com espaço ao redor dos pipes (mais legível no fonte)
+
+globs:
+  - "**/*.md"
+
+ignores:
+  - ".venv/**"
+  - "site/**"
+  - "**/node_modules/**"
+  - "Cronograma.md" # anotação pessoal fora da estrutura de conteúdo do CLAUDE.md
+  - "CLAUDE.md" # arquivo de instruções do Claude Code, não é conteúdo do site
