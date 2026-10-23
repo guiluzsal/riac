@@ -1,0 +1,10 @@
+[project]
+site_name = "RIAC"
+site_description = "Repositório de Inteligência de Ameaças Cibernéticas"
+
+nav = [
+  { "Início" = "index.md" },
+]
+
+[project.theme]
+language = "pt-BR"
