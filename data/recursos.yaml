@@ -1,0 +1,73 @@
+- nome: MITRE ATT&CK
+  url: https://attack.mitre.org/
+  descricao: >-
+    Base de conhecimento pública de táticas, técnicas e procedimentos (TTPs)
+    de adversários, usada para descrever e classificar comportamentos de
+    ataque de forma padronizada.
+  categoria: frameworks-e-modelos
+  custo: gratuito
+  requer_cadastro: nao
+  idioma: [en]
+  fase_ciclo: [analise, disseminacao]
+  nivel: intermediario
+  tags: [ttps, matriz, mitre]
+  verificado_em: 2026-10-23
+
+- nome: Shodan
+  url: https://www.shodan.io/
+  descricao: >-
+    Mecanismo de busca que varre a internet e indexa serviços expostos
+    (portas, banners, certificados) por IP, usado para mapear e pivotar
+    sobre infraestrutura exposta, como servidores de C2 e phishing.
+  categoria: varredura-de-internet
+  custo: freemium
+  requer_cadastro: sim
+  idioma: [en]
+  fase_ciclo: [coleta]
+  nivel: intermediario
+  tags: [osint, infraestrutura, pivotagem]
+  verificado_em: 2026-10-23
+
+- nome: crt.sh
+  url: https://crt.sh/
+  descricao: >-
+    Mecanismo de busca sobre logs de Certificate Transparency (CT), usado
+    para descobrir domínios e subdomínios relacionados a partir de
+    certificados emitidos.
+  categoria: dns-e-dominios
+  custo: gratuito
+  requer_cadastro: nao
+  idioma: [en]
+  fase_ciclo: [coleta]
+  nivel: iniciante
+  tags: [certificate-transparency, subdominios, osint]
+  verificado_em: 2026-10-23
+
+- nome: VirusTotal
+  url: https://www.virustotal.com/
+  descricao: >-
+    Serviço que analisa arquivos, URLs, domínios e IPs submetidos pelo
+    usuário, agregando veredito de dezenas de motores antivírus e sandboxes.
+  categoria: analise-de-urls-e-arquivos
+  custo: freemium
+  requer_cadastro: parcial
+  idioma: [en]
+  fase_ciclo: [processamento, analise]
+  nivel: iniciante
+  tags: [sandbox, hash, triagem, reputacao, multiuso]
+  verificado_em: 2026-10-23
+
+- nome: CERT.br
+  url: https://cert.br/
+  descricao: >-
+    Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no
+    Brasil, mantido pelo NIC.br. Trata incidentes de segurança envolvendo
+    redes brasileiras e publica estatísticas, alertas e recomendações.
+  categoria: ecossistema-lusofono
+  custo: gratuito
+  requer_cadastro: nao
+  idioma: [pt]
+  fase_ciclo: [disseminacao]
+  nivel: iniciante
+  tags: [lusofono, csirt, brasil]
+  verificado_em: 2026-10-23

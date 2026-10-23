@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/riac/riac/schemas/recursos.schema.json",
+  "title": "Catálogo de recursos do RIAC",
+  "description": "Schema de validação para data/recursos.yaml, conforme o modelo de dados definido em CLAUDE.md.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "$ref": "#/$defs/recurso"
+  },
+  "$defs": {
+    "recurso": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "nome",
+        "url",
+        "descricao",
+        "categoria",
+        "custo",
+        "requer_cadastro",
+        "idioma",
+        "fase_ciclo",
+        "nivel",
+        "verificado_em"
+      ],
+      "properties": {
+        "nome": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Nome do recurso."
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://",
+          "description": "URL canônica do recurso."
+        },
+        "descricao": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Descrição objetiva do recurso, em português."
+        },
+        "categoria": {
+          "type": "string",
+          "description": "Categoria principal do recurso. Cada recurso tem exatamente uma categoria; use tags para aspectos secundários.",
+          "enum": [
+            "frameworks-e-modelos",
+            "varredura-de-internet",
+            "ips-e-asns",
+            "dns-e-dominios",
+            "analise-de-urls-e-arquivos",
+            "reputacao-e-feeds",
+            "malware",
+            "atores",
+            "vulnerabilidades",
+            "ferramentas",
+            "padroes",
+            "ecossistema-lusofono",
+            "aprendizado"
+          ]
+        },
+        "custo": {
+          "type": "string",
+          "enum": ["gratuito", "freemium", "pago"]
+        },
+        "requer_cadastro": {
+          "type": "string",
+          "enum": ["sim", "nao", "parcial"]
+        },
+        "idioma": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+          },
+          "description": "Códigos de idioma do recurso (ex.: en, pt, pt-BR)."
+        },
+        "fase_ciclo": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "direcao",
+              "coleta",
+              "processamento",
+              "analise",
+              "disseminacao",
+              "feedback"
+            ]
+          },
+          "description": "Fase(s) do ciclo de inteligência em que o recurso é mais útil."
+        },
+        "nivel": {
+          "type": "string",
+          "enum": ["iniciante", "intermediario", "avancado"]
+        },
+        "tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Tags livres para aspectos secundários (ex.: categorias alternativas, lusofono)."
+        },
+        "verificado_em": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "description": "Data da última verificação manual do recurso (AAAA-MM-DD)."
+        }
+      }
+    }
+  }
+}
