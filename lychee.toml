@@ -7,8 +7,20 @@ exclude_path = [".venv", "site", "node_modules", "Cronograma.md"]
 # link funciona normalmente em um navegador (verificado manualmente em
 # 2026-10-23). Sem esta exclusão, o link do artigo original do Diamond
 # Model em docs/verbetes/diamond-model.md sempre falharia no CI.
+#
+# shodan.io bloqueia requisições de IPs de provedores de nuvem (incluindo
+# os runners do GitHub Actions) com 403 — confirmado na primeira execução
+# real do workflow Qualidade em 2026-10-23 (run 39959095941), embora o
+# link funcione normalmente em um navegador comum.
+#
+# guiluzsal.github.io/riac é o próprio site publicado por este repositório
+# (docs.yml). Checá-lo aqui é redundante com o sucesso do deploy e corre
+# risco de falso negativo por corrida entre os dois workflows quando
+# ambos disparam no mesmo push.
 exclude = [
   "^https://apps\\.dtic\\.mil/",
+  "^https://www\\.shodan\\.io/",
+  "^https://guiluzsal\\.github\\.io/riac/",
 ]
 
 accept = [200, 201, 202, 203, 204, 206, 301, 302, 303, 307, 308]
