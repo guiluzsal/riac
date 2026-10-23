@@ -5,8 +5,9 @@ recursos e verbetes sobre Cyber Threat Intelligence (CTI). O conteúdo é
 mantido como código (docs-as-code) e recebe contribuições da comunidade via
 GitHub.
 
-> **Status:** projeto em estágio inicial de construção. Ainda não há site
-> publicado nem catálogo de recursos populado.
+> **Status:** projeto em estágio inicial de construção.
+
+🔗 Site publicado: <https://guiluzsal.github.io/riac/>
 
 ## O que o RIAC oferece
 

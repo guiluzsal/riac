@@ -1,5 +1,6 @@
 [project]
 site_name = "RIAC"
+site_url = "https://guiluzsal.github.io/riac/"
 site_description = "Repositório de Inteligência de Ameaças Cibernéticas"
 
 nav = [
