@@ -1,0 +1,22 @@
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+
+Copyright (c) 2026 Contribuidores do RIAC
+
+Todo o conteúdo deste repositório — verbetes, textos do catálogo de recursos,
+glossário, templates operacionais e demais materiais em `docs/` e `data/` —
+está licenciado sob a Creative Commons Attribution-ShareAlike 4.0
+International License (CC BY-SA 4.0).
+
+Isso significa que você pode copiar, redistribuir e adaptar este conteúdo
+para qualquer finalidade, inclusive comercial, desde que:
+
+1. Dê crédito apropriado ao RIAC e aos autores originais, com um link para
+   esta licença e indicação de eventuais alterações feitas;
+2. Distribua qualquer material derivado sob esta mesma licença (CC BY-SA 4.0).
+
+Esta licença se aplica apenas ao conteúdo. O código-fonte do site (scripts,
+configuração do Zensical, workflows de CI) está licenciado sob a licença MIT,
+disponível em LICENSE.
+
+O texto completo e juridicamente vinculante da licença está disponível em:
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.pt

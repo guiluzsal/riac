@@ -1,0 +1,12 @@
+# Ambiente Python
+.venv/
+__pycache__/
+*.pyc
+
+# Saída de build do Zensical
+site/
+.cache/
+
+# Editores e sistemas operacionais
+.DS_Store
+*.swp
