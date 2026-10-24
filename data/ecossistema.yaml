@@ -28,6 +28,19 @@
   tags: [csirt, academico, brasil]
   verificado_em: 2026-10-23
 
+- nome: LGPD
+  url: https://guiluzsal.github.io/riac/ecossistema/legislacao/lgpd/
+  descricao: >-
+    Lei Geral de Proteção de Dados Pessoais, Lei nº 13.709, de 14 de
+    agosto de 2018, que disciplina o tratamento de dados pessoais no
+    Brasil e cria a Agência Nacional de Proteção de Dados (ANPD).
+    Referência central para a interseção entre CTI e privacidade,
+    sobretudo em notificação de incidentes e vazamentos de dados.
+    Texto integral disponível no RIAC.
+  tipo: legislacao
+  tags: [lei, privacidade, anpd, brasil]
+  verificado_em: 2026-10-24
+
 - nome: E-Ciber
   url: https://guiluzsal.github.io/riac/ecossistema/legislacao/e-ciber/
   descricao: >-
