@@ -101,6 +101,19 @@
   tags: [lei, codigo-penal, invasao-de-dispositivo, brasil]
   verificado_em: 2026-10-24
 
+- nome: Marco Civil da Internet
+  url: https://guiluzsal.github.io/riac/ecossistema/legislacao/marco-civil-da-internet/
+  descricao: >-
+    Lei nº 12.965, de 23 de abril de 2014, que estabelece princípios,
+    garantias, direitos e deveres para o uso da internet no Brasil,
+    incluindo neutralidade de rede, proteção à privacidade e aos dados
+    pessoais, guarda de registros de conexão e de acesso a aplicações, e
+    responsabilidade de provedores por conteúdo de terceiros. Texto
+    integral disponível no RIAC.
+  tipo: legislacao
+  tags: [lei, neutralidade-de-rede, registros-de-conexao, brasil]
+  verificado_em: 2026-10-24
+
 - nome: Resolução CD/ANPD nº 15/2024
   url: https://guiluzsal.github.io/riac/ecossistema/legislacao/resolucao-cd-anpd-15-2024/
   descricao: >-

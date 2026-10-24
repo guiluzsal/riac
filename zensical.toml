@@ -62,6 +62,7 @@ nav = [
           { "E-Ciber" = "ecossistema/legislacao/e-ciber.md" },
           { "Lei Carolina Dieckmann" = "ecossistema/legislacao/lei-carolina-dieckmann.md" },
           { "LGPD" = "ecossistema/legislacao/lgpd.md" },
+          { "Marco Civil da Internet" = "ecossistema/legislacao/marco-civil-da-internet.md" },
           { "PNCiber" = "ecossistema/legislacao/pnciber.md" },
           { "PNSI" = "ecossistema/legislacao/pnsi.md" },
           { "REGIC" = "ecossistema/legislacao/regic.md" },
