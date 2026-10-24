@@ -60,6 +60,7 @@ nav = [
       { "Instituições" = "ecossistema/instituicoes.md" },
       { "Legislação" = [
           { "E-Ciber" = "ecossistema/legislacao/e-ciber.md" },
+          { "Lei Carolina Dieckmann" = "ecossistema/legislacao/lei-carolina-dieckmann.md" },
           { "LGPD" = "ecossistema/legislacao/lgpd.md" },
           { "PNCiber" = "ecossistema/legislacao/pnciber.md" },
           { "PNSI" = "ecossistema/legislacao/pnsi.md" },

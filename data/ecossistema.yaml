@@ -89,6 +89,18 @@
   tags: [decreto, gsi, ctir-gov, brasil]
   verificado_em: 2026-10-24
 
+- nome: Lei Carolina Dieckmann
+  url: https://guiluzsal.github.io/riac/ecossistema/legislacao/lei-carolina-dieckmann/
+  descricao: >-
+    Lei nº 12.737, de 30 de novembro de 2012, que tipifica delitos
+    informáticos ao inserir os arts. 154-A e 154-B no Código Penal
+    (invasão de dispositivo informático), além de alterar os arts. 266 e
+    298. Batizada em referência ao caso da atriz Carolina Dieckmann.
+    Texto integral disponível no RIAC.
+  tipo: legislacao
+  tags: [lei, codigo-penal, invasao-de-dispositivo, brasil]
+  verificado_em: 2026-10-24
+
 - nome: Resolução CD/ANPD nº 15/2024
   url: https://guiluzsal.github.io/riac/ecossistema/legislacao/resolucao-cd-anpd-15-2024/
   descricao: >-
