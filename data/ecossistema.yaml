@@ -63,3 +63,15 @@
   tipo: legislacao
   tags: [decreto, politica, gsi, brasil]
   verificado_em: 2026-10-24
+
+- nome: REGIC
+  url: https://guiluzsal.github.io/riac/ecossistema/legislacao/regic/
+  descricao: >-
+    Rede Federal de Gestão de Incidentes Cibernéticos, instituída pelo
+    Decreto nº 10.748, de 16 de julho de 2021, para coordenar prevenção,
+    tratamento e resposta a incidentes cibernéticos entre órgãos e
+    entidades da administração pública federal, sob coordenação do
+    GSI/CTIR Gov. Texto integral disponível no RIAC.
+  tipo: legislacao
+  tags: [decreto, gsi, ctir-gov, brasil]
+  verificado_em: 2026-10-24
