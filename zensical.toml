@@ -59,11 +59,12 @@ nav = [
   { "Ecossistema" = [
       { "Instituições" = "ecossistema/instituicoes.md" },
       { "Legislação" = [
-          { "LGPD" = "ecossistema/legislacao/lgpd.md" },
           { "E-Ciber" = "ecossistema/legislacao/e-ciber.md" },
+          { "LGPD" = "ecossistema/legislacao/lgpd.md" },
           { "PNCiber" = "ecossistema/legislacao/pnciber.md" },
           { "PNSI" = "ecossistema/legislacao/pnsi.md" },
           { "REGIC" = "ecossistema/legislacao/regic.md" },
+          { "Resolução CD/ANPD nº 15/2024" = "ecossistema/legislacao/resolucao-cd-anpd-15-2024.md" },
       ] },
   ] },
   { "Glossário" = "glossario.md" },

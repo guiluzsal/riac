@@ -88,3 +88,16 @@
   tipo: legislacao
   tags: [decreto, gsi, ctir-gov, brasil]
   verificado_em: 2026-10-24
+
+- nome: Resolução CD/ANPD nº 15/2024
+  url: https://guiluzsal.github.io/riac/ecossistema/legislacao/resolucao-cd-anpd-15-2024/
+  descricao: >-
+    Aprova o Regulamento de Comunicação de Incidente de Segurança,
+    editado pelo Conselho Diretor da ANPD com base no art. 48 da LGPD.
+    Define critérios de risco ou dano relevante, prazos de três dias
+    úteis para comunicar incidentes à ANPD e aos titulares, conteúdo
+    mínimo da comunicação e registro de incidentes. Texto integral
+    disponível no RIAC.
+  tipo: legislacao
+  tags: [resolucao, anpd, incidente, brasil]
+  verificado_em: 2026-10-24
