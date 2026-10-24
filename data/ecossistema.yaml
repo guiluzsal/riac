@@ -51,3 +51,15 @@
   tipo: legislacao
   tags: [decreto, politica, gsi, brasil]
   verificado_em: 2026-10-24
+
+- nome: PNSI
+  url: https://guiluzsal.github.io/riac/ecossistema/legislacao/pnsi/
+  descricao: >-
+    Política Nacional de Segurança da Informação, instituída pelo
+    Decreto nº 12.572, de 4 de agosto de 2025, no âmbito da
+    administração pública federal. Cria o Comitê Gestor da Segurança da
+    Informação e revoga o Decreto nº 9.637/2018 e normas relacionadas.
+    Texto integral disponível no RIAC.
+  tipo: legislacao
+  tags: [decreto, politica, gsi, brasil]
+  verificado_em: 2026-10-24

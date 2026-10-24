@@ -61,6 +61,7 @@ nav = [
       { "Legislação" = [
           { "E-Ciber" = "ecossistema/legislacao/e-ciber.md" },
           { "PNCiber" = "ecossistema/legislacao/pnciber.md" },
+          { "PNSI" = "ecossistema/legislacao/pnsi.md" },
       ] },
   ] },
   { "Glossário" = "glossario.md" },
