@@ -12,6 +12,9 @@ Use um dos formulários de issue do repositório:
   catálogo.
 - [Sugerir um verbete](https://github.com/guiluzsal/riac/issues/new?template=sugerir-verbete.yml) —
   para propor um conceito, modelo ou prática que mereça um verbete.
+- [Sugerir item do ecossistema](https://github.com/guiluzsal/riac/issues/new?template=sugerir-ecossistema.yml) —
+  para indicar uma instituição ou uma norma/legislação brasileira que falta
+  na seção Ecossistema.
 
 Você também pode clicar no ícone de lápis (✎) no canto superior direito de
 qualquer página deste site para editá-la diretamente no GitHub — isso abre

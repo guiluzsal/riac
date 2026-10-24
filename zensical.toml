@@ -14,7 +14,6 @@ nav = [
   { "Recursos" = [
       { "Ator" = "recursos/ator.md" },
       { "Domínio" = "recursos/dominio.md" },
-      { "Ecossistema" = "recursos/ecossistema.md" },
       { "Ferramenta" = "recursos/ferramenta.md" },
       { "Hacktivismo" = "recursos/hacktivismo.md" },
       { "IOC" = "recursos/ioc.md" },
@@ -57,13 +56,20 @@ nav = [
           { "EPSS" = "verbetes/epss.md" },
       ] },
   ] },
+  { "Ecossistema" = [
+      { "Instituições" = "ecossistema/instituicoes.md" },
+      { "Legislação" = "ecossistema/legislacao.md" },
+  ] },
   { "Glossário" = "glossario.md" },
   { "Contribuir" = "contribuir.md" },
 ]
 
 [project.plugins.macros]
 render_by_default = false
-force_render_paths = "recursos/*.md"
+force_render_paths = """
+recursos/*.md
+ecossistema/*.md
+"""
 
 [project.theme]
 custom_dir = "overrides"

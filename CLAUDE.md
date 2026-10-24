@@ -14,10 +14,11 @@ O RIAC é uma plataforma colaborativa e aberta, em português, que reúne recurs
 - **Recursos:** links curados para ferramentas, bases e referências de CTI, com descrição em português e metadados.
 - **Verbetes:** artigos explicativos sobre conceitos, modelos e práticas de CTI.
 - **Glossário bilíngue EN↔PT:** cada termo traz a tradução recomendada e a justificativa.
-- **Contexto brasileiro:**
-  - CERT.br, CTIR Gov e CAIS/RNP;
-  - legislação brasileira relevante;
-  - ameaças que atingem o Brasil.
+- **Ecossistema:** seção própria sobre o contexto brasileiro, dividida em
+  Instituições (CERT.br, CTIR Gov, CAIS/RNP e demais entidades) e
+  Legislação (leis, decretos e políticas de cibersegurança relevantes). É o
+  diferencial do RIAC.
+- **Atenção a ameaças que atingem o Brasil** nos verbetes e no catálogo de recursos.
 - **Templates operacionais em PT:** relatório de inteligência, RFI, PIRs e perfil de ator.
 - **Trilhas de aprendizado** por nível (fase 2).
 - **Fichas de ameaças brasileiras, agregador de notícias e API/JSON do catálogo** (fase 3).
@@ -54,12 +55,15 @@ riac/
 │   ├── verbetes/            # um arquivo .md por verbete
 │   ├── glossario.md
 │   ├── recursos/            # páginas do catálogo por categoria
+│   ├── ecossistema/         # Instituições e Legislação
 │   ├── templates/           # templates operacionais
 │   └── contribuir.md
 ├── data/
-│   └── recursos.yaml        # catálogo estruturado
+│   ├── recursos.yaml        # catálogo estruturado de recursos
+│   └── ecossistema.yaml     # catálogo estruturado do ecossistema
 ├── schemas/
-│   └── recursos.schema.json # schema de validação do YAML
+│   ├── recursos.schema.json    # schema de validação de data/recursos.yaml
+│   └── ecossistema.schema.json # schema de validação de data/ecossistema.yaml
 └── .github/
     ├── workflows/
     │   ├── docs.yml         # build e deploy no Pages
@@ -134,12 +138,11 @@ Categorias válidas (use exatamente estes slugs no campo `categoria`):
 | `vazamentos` | Monitoramento de vazamentos de dados e de atividade em fóruns e mercados da dark web: mapeamento de publicações, vazamentos de credenciais, ofertas de acesso e dados comprometidos, com atribuição a fórum, autor e data quando disponível. | Have I Been Pwned, analyzer.vecert.io |
 | `vulnerabilidade` | Fontes para identificar, priorizar e acompanhar vulnerabilidades e sua exploração ativa. | NVD, CVE.org, CISA KEV, EPSS, Exploit-DB |
 | `ferramenta` | Software que o analista instala ou opera: plataformas de inteligência (TIPs), gestão de casos, análise e detecção. | MISP, OpenCTI, TheHive/Cortex, CyberChef, Suricata, Zeek |
-| `ecossistema` | Instituições, normas e fontes do Brasil: CSIRTs nacionais, órgãos de governo, legislação e políticas de cibersegurança. É o diferencial do RIAC. | CERT.br, CTIR Gov, CAIS/RNP, Política Nacional de Cibersegurança, LGPD, Marco Civil da Internet |
 
 Regras de classificação:
 - Cada recurso tem **uma** categoria principal. Use `tags` para aspectos secundários.
-- Em caso de dúvida, classifique pelo **uso principal do recurso no trabalho de CTI**, não por quem o publica. Exemplo: a CISA KEV é publicada por um órgão de governo dos EUA, mas entra em `vulnerabilidade`, não em `ecossistema` (reservada a instituições, normas e políticas do Brasil).
-- Recursos brasileiros que se encaixam claramente em outra categoria ficam nela, com a tag `brasil`. Exemplo: um feed de indicadores publicado por um CSIRT brasileiro iria para `ioc`. A categoria `ecossistema` é para instituições, normas e políticas do Brasil.
+- Em caso de dúvida, classifique pelo **uso principal do recurso no trabalho de CTI**, não por quem o publica. Exemplo: a CISA KEV é publicada por um órgão de governo dos EUA, mas entra em `vulnerabilidade`.
+- Recursos brasileiros que se encaixam claramente em uma categoria do catálogo ficam nela, com a tag `brasil`. Exemplo: um feed de indicadores publicado por um CSIRT brasileiro iria para `ioc`. Instituições, normas e políticas do Brasil não entram no catálogo de recursos — veja "Modelo de dados do ecossistema" abaixo.
 - **Categorias de infraestrutura** (`varredura`, `ip`, `dominio`): classifique pela **pergunta que o recurso responde melhor**.
   - "O que está rodando neste IP, ou ele é só ruído de varredura em massa?" → `varredura`.
   - "A quem pertence este IP e por onde ele é roteado?" → `ip`.
@@ -154,6 +157,33 @@ Regras de classificação:
 - **Especificações, formatos e linguagens (ex.: STIX, YARA, Sigma) não entram no catálogo de recursos.** Elas ficam só nos verbetes (ex.: [YARA](docs/verbetes/yara.md), [Sigma](docs/verbetes/sigma.md), [STIX](docs/verbetes/stix.md)). Um recurso só vai para `ferramenta` se for algo que se instala ou executa — por exemplo, um scanner que executa regras YARA vai para `ferramenta`, mas a linguagem YARA em si não entra no catálogo.
 
 Ao adicionar ou alterar campos, atualize também `schemas/recursos.schema.json`.
+
+### Modelo de dados do ecossistema (`data/ecossistema.yaml`)
+A seção **Ecossistema** (`docs/ecossistema/`) não é uma categoria do
+catálogo de recursos — é um item de nível superior no site, como Recursos,
+Verbetes e Glossário, dedicado ao contexto brasileiro: instituições e
+legislação. Tem seu próprio arquivo de dados e schema.
+
+```yaml
+- nome: CERT.br
+  url: https://cert.br/
+  descricao: >-
+    Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no
+    Brasil, mantido pelo NIC.br.
+  tipo: instituicao
+  tags: [csirt, brasil]
+  verificado_em: 2026-10-23
+```
+
+Valores válidos para o campo `tipo`:
+
+| Slug | O que agrega | Exemplos |
+|---|---|---|
+| `instituicao` | CSIRTs nacionais, órgãos de governo e demais entidades de referência para CTI no Brasil. | CERT.br, CTIR Gov, CAIS/RNP |
+| `legislacao` | Leis, decretos e políticas de cibersegurança brasileiras relevantes para CTI. | LGPD, Marco Civil da Internet, Política Nacional de Cibersegurança |
+
+Cada item tem **um** tipo principal. Use `tags` para aspectos secundários.
+Ao adicionar ou alterar campos, atualize também `schemas/ecossistema.schema.json`.
 
 ## Regras de conteúdo (obrigatórias)
 - Sempre que um termo tiver entrada no [glossário](docs/glossario.md), use a forma em
@@ -173,7 +203,7 @@ Ao adicionar ou alterar campos, atualize também `schemas/recursos.schema.json`.
 ## Qualidade e CI
 O workflow `qualidade.yml` deve rodar em todo PR:
 - `lychee`: verifica links quebrados;
-- validação de `data/recursos.yaml` contra o schema;
+- validação de `data/recursos.yaml` e `data/ecossistema.yaml` contra os respectivos schemas;
 - `markdownlint`;
 - corretor ortográfico pt-BR (cspell ou Vale);
 - `zensical build`: o site precisa compilar sem erros.

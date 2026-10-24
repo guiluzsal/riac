@@ -1,0 +1,61 @@
+name: Sugerir item do ecossistema
+description: Indique uma instituição ou uma norma/legislação brasileira para a seção Ecossistema.
+title: "[Ecossistema]: "
+labels: ["ecossistema", "conteúdo"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Os campos abaixo espelham `schemas/ecossistema.schema.json`. Veja o
+        modelo de dados em `CLAUDE.md` antes de preencher.
+
+  - type: input
+    id: nome
+    attributes:
+      label: Nome
+      placeholder: "Ex.: CERT.br"
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: "https://exemplo.gov.br/"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição
+      description: Uma ou duas frases objetivas, em português.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo
+      description: Instituição (CSIRT, órgão de governo etc.) ou legislação (lei, decreto, política).
+      options:
+        - instituicao
+        - legislacao
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags (opcional)
+      description: Separadas por vírgula. Use para aspectos secundários.
+      placeholder: "csirt, governo"
+    validations:
+      required: false
+
+  - type: textarea
+    id: justificativa
+    attributes:
+      label: Por que este item deveria entrar no ecossistema? (opcional)
+    validations:
+      required: false

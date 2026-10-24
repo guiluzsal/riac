@@ -30,6 +30,9 @@ jobs:
       - run: >-
           check-jsonschema --schemafile schemas/recursos.schema.json
           data/recursos.yaml
+      - run: >-
+          check-jsonschema --schemafile schemas/ecossistema.schema.json
+          data/ecossistema.yaml
 
   markdownlint:
     name: Markdownlint

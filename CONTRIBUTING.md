@@ -8,7 +8,8 @@ quem não usa Git, via formulário de issue.
 
 Leia o [`CLAUDE.md`](CLAUDE.md) na raiz do repositório. Ele define o escopo
 do projeto, as convenções de conteúdo (template de verbete, modelo de dados
-do catálogo em `data/recursos.yaml`, categorias válidas) e as regras
+do catálogo em `data/recursos.yaml` e do ecossistema em
+`data/ecossistema.yaml`, categorias e tipos válidos) e as regras
 obrigatórias de conteúdo (apenas material TLP:CLEAR, não inventar dados,
 citar fontes).
 
@@ -20,6 +21,8 @@ Use um dos formulários de issue:
   os campos espelham `schemas/recursos.schema.json`.
 - **[Sugerir um verbete](https://github.com/guiluzsal/riac/issues/new?template=sugerir-verbete.yml)** —
   para propor um conceito, modelo ou prática de CTI.
+- **[Sugerir item do ecossistema](https://github.com/guiluzsal/riac/issues/new?template=sugerir-ecossistema.yml)** —
+  os campos espelham `schemas/ecossistema.schema.json`.
 
 Ou clique no ícone de lápis (✎) em qualquer página do
 [site publicado](https://guiluzsal.github.io/riac/) para editá-la
@@ -34,23 +37,25 @@ zensical serve      # prévia local em http://localhost:8000
 zensical build       # gera o site em site/
 ```
 
-## Como os recursos são gerados
+## Como os recursos e o ecossistema são gerados
 
-As páginas em `docs/recursos/*.md` **não listam os recursos manualmente**.
-Cada página chama a macro `recursos_da_categoria("<categoria>")` (definida em
-`main.py`), que lê `data/recursos.yaml` em tempo de build e renderiza os
-recursos daquela categoria. Isso usa a extensão nativa de macros do
+As páginas em `docs/recursos/*.md` e `docs/ecossistema/*.md` **não listam
+os itens manualmente**. Cada página chama uma macro — `recursos_da_categoria("<categoria>")`
+para `docs/recursos/` ou `itens_do_ecossistema("<tipo>")` para
+`docs/ecossistema/` (ambas definidas em `main.py`) — que lê, respectivamente,
+`data/recursos.yaml` ou `data/ecossistema.yaml` em tempo de build e
+renderiza os itens correspondentes. Isso usa a extensão nativa de macros do
 Zensical (`[project.plugins.macros]` em `zensical.toml`), compatível com a
 API do `mkdocs-macros-plugin`.
 
-Na prática, isso significa que **para adicionar um recurso ao catálogo
-basta editar `data/recursos.yaml`** — a página da categoria correspondente é
-atualizada automaticamente no próximo `zensical build`, sem precisar tocar
-em nenhum arquivo `.md` de `docs/recursos/`.
+Na prática, isso significa que **para adicionar um item basta editar o YAML
+correspondente** — a página é atualizada automaticamente no próximo
+`zensical build`, sem precisar tocar em nenhum arquivo `.md` de
+`docs/recursos/` ou `docs/ecossistema/`.
 
-> **Atenção:** o Zensical não rastreia `data/recursos.yaml` como
+> **Atenção:** o Zensical não rastreia esses arquivos YAML como
 > dependência das páginas que o `main.py` lê — só o conteúdo `.md` em si.
-> Depois de editar o catálogo, rode `zensical build --clean` (não só
+> Depois de editar um catálogo, rode `zensical build --clean` (não só
 > `zensical build`) ou reinicie o `zensical serve`, senão o build
 > incremental pode continuar mostrando o estado antigo da página.
 
@@ -68,6 +73,18 @@ em nenhum arquivo `.md` de `docs/recursos/`.
    ```bash
    pip install check-jsonschema
    check-jsonschema --schemafile schemas/recursos.schema.json data/recursos.yaml
+   ```
+
+## Como propor um item do ecossistema
+
+1. Edite `data/ecossistema.yaml` seguindo o modelo de dados do `CLAUDE.md`.
+2. Escolha o `tipo` correto: `instituicao` (CSIRTs, órgãos de governo e
+   demais entidades) ou `legislacao` (leis, decretos, políticas).
+3. Valide localmente:
+
+   ```bash
+   pip install check-jsonschema
+   check-jsonschema --schemafile schemas/ecossistema.schema.json data/ecossistema.yaml
    ```
 
 ## Como propor um verbete
@@ -100,9 +117,10 @@ abrir o PR:
 # build do site
 zensical build
 
-# schema do catálogo
+# schema do catálogo e do ecossistema
 pip install check-jsonschema
 check-jsonschema --schemafile schemas/recursos.schema.json data/recursos.yaml
+check-jsonschema --schemafile schemas/ecossistema.schema.json data/ecossistema.yaml
 
 # markdownlint e ortografia (requerem Node.js)
 npm install

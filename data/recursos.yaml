@@ -33,18 +33,6 @@
   tags: [sandbox, hash, triagem, reputacao, multiuso]
   verificado_em: 2026-10-23
 
-- nome: CERT.br
-  url: https://cert.br/
-  descricao: >-
-    Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no
-    Brasil, mantido pelo NIC.br. Trata incidentes de segurança envolvendo
-    redes brasileiras e publica estatísticas, alertas e recomendações.
-  categoria: ecossistema
-  idioma: [pt]
-  fase_ciclo: [disseminacao]
-  tags: [csirt, brasil]
-  verificado_em: 2026-10-23
-
 - nome: Censys
   url: https://censys.com/
   descricao: >-
@@ -398,30 +386,6 @@
   idioma: [en]
   fase_ciclo: [coleta, processamento]
   tags: [ids, ips, oisf]
-  verificado_em: 2026-10-23
-
-- nome: CTIR Gov
-  url: https://www.gov.br/gsi/pt-br/seguranca-da-informacao-e-cibernetica
-  descricao: >-
-    Centro de Prevenção, Tratamento e Resposta a Incidentes Cibernéticos de
-    Governo, vinculado ao GSI/PR, responsável por coordenar a resposta a
-    incidentes na administração pública federal brasileira.
-  categoria: ecossistema
-  idioma: [pt]
-  fase_ciclo: [disseminacao]
-  tags: [governo, brasil]
-  verificado_em: 2026-10-23
-
-- nome: CAIS/RNP
-  url: https://www.rnp.br/servicos/cais
-  descricao: >-
-    Centro de Atendimento a Incidentes de Segurança da RNP (Rede Nacional
-    de Ensino e Pesquisa), um dos primeiros CSIRTs do Brasil, atuante na
-    rede acadêmica nacional.
-  categoria: ecossistema
-  idioma: [pt]
-  fase_ciclo: [disseminacao]
-  tags: [csirt, academico, brasil]
   verificado_em: 2026-10-23
 
 - nome: Analyzer (VECERT)
