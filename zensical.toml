@@ -1,5 +1,5 @@
 [project]
-site_name = "REPOSITÓRIO DE INTELIGÊNCIA DE AMEAÇAS CIBERNÉTICAS (RIAC)"
+site_name = "REPOSITÓRIO DE INTELIGÊNCIA DE AMEAÇAS CIBERNÉTICAS"
 site_url = "https://guiluzsal.github.io/riac/"
 site_description = "Repositório de Inteligência de Ameaças Cibernéticas"
 
@@ -58,7 +58,10 @@ nav = [
   ] },
   { "Ecossistema" = [
       { "Instituições" = "ecossistema/instituicoes.md" },
-      { "Legislação" = "ecossistema/legislacao.md" },
+      { "Legislação" = [
+          { "Visão geral" = "ecossistema/legislacao.md" },
+          { "E-Ciber (Decreto nº 12.573/2025)" = "ecossistema/legislacao/e-ciber.md" },
+      ] },
   ] },
   { "Glossário" = "glossario.md" },
   { "Contribuir" = "contribuir.md" },

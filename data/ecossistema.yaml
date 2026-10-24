@@ -27,3 +27,15 @@
   tipo: instituicao
   tags: [csirt, academico, brasil]
   verificado_em: 2026-10-23
+
+- nome: E-Ciber (Decreto nº 12.573/2025)
+  url: https://guiluzsal.github.io/riac/ecossistema/legislacao/e-ciber/
+  descricao: >-
+    Estratégia Nacional de Cibersegurança, instituída pelo Decreto nº
+    12.573, de 4 de agosto de 2025, em quatro eixos temáticos (proteção e
+    conscientização, segurança e resiliência, cooperação e integração,
+    soberania e governança). Revoga o decreto de 2020. Texto integral
+    disponível no RIAC.
+  tipo: legislacao
+  tags: [decreto, estrategia, gsi, brasil]
+  verificado_em: 2026-10-24
