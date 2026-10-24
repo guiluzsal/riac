@@ -1,12 +1,19 @@
-# Decreto nº 12.573, de 4 de agosto de 2025
+---
+descricao: Institui a Estratégia Nacional de Cibersegurança.
+tipo_norma: decreto
+numero: "12.573/2025"
+data_assinatura: 2025-08-04
+data_publicacao: 2025-08-05
+orgao: Presidência da República / GSI
+situacao: vigente
+fonte_oficial:
+  nome: Câmara dos Deputados (LegIn)
+  url: https://www2.camara.leg.br/legin/fed/decret/2025/decreto-12573-4-agosto-2025-797813-publicacaooriginal-176048-pe.html
+---
 
-!!! info "Fonte"
-    Institui a Estratégia Nacional de Cibersegurança (E-Ciber). Assinado por
-    Luiz Inácio Lula da Silva em 4 de agosto de 2025 e publicado no Diário
-    Oficial da União em 5 de agosto de 2025. Revoga o
-    [Decreto nº 10.222, de 5 de fevereiro de 2020](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/D10222.htm),
-    que instituía a E-Ciber anterior. Texto oficial publicado pela
-    [Câmara dos Deputados (LegIn)](https://www2.camara.leg.br/legin/fed/decret/2025/decreto-12573-4-agosto-2025-797813-publicacaooriginal-176048-pe.html).
+# E-Ciber
+
+{{ ficha_legislacao(page) }}
 
 O PRESIDENTE DA REPÚBLICA, no uso da atribuição que lhe confere o art. 84,
 *caput*, inciso VI, alínea *a*, da Constituição,

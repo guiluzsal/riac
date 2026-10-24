@@ -59,8 +59,7 @@ nav = [
   { "Ecossistema" = [
       { "Instituições" = "ecossistema/instituicoes.md" },
       { "Legislação" = [
-          { "Visão geral" = "ecossistema/legislacao.md" },
-          { "E-Ciber (Decreto nº 12.573/2025)" = "ecossistema/legislacao/e-ciber.md" },
+          { "E-Ciber" = "ecossistema/legislacao/e-ciber.md" },
       ] },
   ] },
   { "Glossário" = "glossario.md" },
@@ -71,7 +70,7 @@ nav = [
 render_by_default = false
 force_render_paths = """
 recursos/*.md
-ecossistema/*.md
+ecossistema/**/*.md
 """
 
 [project.theme]

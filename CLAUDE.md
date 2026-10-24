@@ -185,6 +185,58 @@ Valores válidos para o campo `tipo`:
 Cada item tem **um** tipo principal. Use `tags` para aspectos secundários.
 Ao adicionar ou alterar campos, atualize também `schemas/ecossistema.schema.json`.
 
+### Template de página de legislação (`docs/ecossistema/legislacao/`)
+Não há página de visão geral para Legislação — cada norma é uma página
+própria em `docs/ecossistema/legislacao/`, listada diretamente no menu
+"Legislação". Toda página desse diretório traz no frontmatter os
+metadados da norma, renderizados automaticamente no topo
+da página pelo macro `ficha_legislacao(page)` (definido em `main.py`):
+
+```markdown
+---
+descricao: Institui a Estratégia Nacional de Cibersegurança.
+tipo_norma: decreto
+numero: "12.573/2025"
+data_assinatura: 2025-08-04
+data_publicacao: 2025-08-05
+orgao: Presidência da República / GSI
+situacao: vigente
+fonte_oficial:
+  nome: Câmara dos Deputados (LegIn)
+  url: https://www2.camara.leg.br/legin/...
+---
+
+# Nome popular da norma (Identificador oficial, se diferente)
+
+{{ ficha_legislacao(page) }}
+```
+
+- **Título (H1), menus de navegação e cartões de listagem:** mostre
+  **apenas** o nome popular da norma quando houver um — por exemplo
+  `# E-Ciber`, não `# E-Ciber (Decreto nº 12.573/2025)` nem
+  `# Decreto nº 12.573, de 4 de agosto de 2025`. O identificador oficial
+  completo (tipo e número) já aparece na linha `Norma:` renderizada pelo
+  macro, então não precisa ser repetido no título, no item de menu em
+  `zensical.toml` nem no campo `nome` do item correspondente em
+  `data/ecossistema.yaml`. Quando a norma não tiver nome popular
+  consolidado, use o identificador oficial nesses três lugares (ex.:
+  `# Lei nº 14.133/2021`).
+- `descricao`: uma frase objetiva, em linguagem simples, sobre o que a
+  norma faz (ex.: "Institui a Estratégia Nacional de Cibersegurança.").
+- `tipo_norma`: um de `lei`, `decreto`, `medida_provisoria`, `portaria`,
+  `instrucao_normativa`, `resolucao`, `projeto_de_lei`.
+- `numero`: identificador oficial da norma (ex.: `"12.573/2025"`).
+- `data_assinatura` / `data_publicacao`: datas no formato `AAAA-MM-DD`;
+  `data_publicacao` é a data no Diário Oficial da União.
+- `orgao`: órgão ou autoridade responsável pela norma.
+- `situacao`: um de `vigente`, `revogada`, `alterada`.
+- `fonte_oficial` (opcional): `nome` e `url` da publicação oficial do texto
+  integral (Planalto, LegIn, DOU...), distinta da `url` em
+  `data/ecossistema.yaml`, que aponta para a própria página no RIAC.
+- Todos os campos são opcionais no macro — ele só renderiza as linhas cujo
+  campo existe no frontmatter — mas `tipo_norma`, `numero`, `data_publicacao`
+  e `situacao` devem estar presentes sempre que a informação for conhecida.
+
 ## Regras de conteúdo (obrigatórias)
 - Sempre que um termo tiver entrada no [glossário](docs/glossario.md), use a forma em
   português no corpo do texto (verbetes, catálogo, templates), não o termo em inglês —
