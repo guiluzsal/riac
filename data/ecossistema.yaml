@@ -101,6 +101,20 @@
   tags: [lei, codigo-penal, invasao-de-dispositivo, brasil]
   verificado_em: 2026-10-24
 
+- nome: Lei nº 14.155/2021
+  url: https://guiluzsal.github.io/riac/ecossistema/legislacao/lei-14155-2021/
+  descricao: >-
+    Lei nº 14.155, de 27 de maio de 2021, que altera o Código Penal para
+    tornar mais graves os crimes de invasão de dispositivo informático,
+    furto mediante fraude eletrônica e estelionato (inclusive fraude
+    eletrônica e estelionato contra idoso ou vulnerável) cometidos de
+    forma eletrônica ou pela internet, e altera o Código de Processo
+    Penal para definir a competência em modalidades de estelionato.
+    Texto integral disponível no RIAC.
+  tipo: legislacao
+  tags: [lei, codigo-penal, estelionato, fraude, brasil]
+  verificado_em: 2026-10-24
+
 - nome: Marco Civil da Internet
   url: https://guiluzsal.github.io/riac/ecossistema/legislacao/marco-civil-da-internet/
   descricao: >-
