@@ -35,6 +35,8 @@
     "publicacao",
     "orgao",
     "situacao",
+    "descricao",
+    "pnciber",
 
     "EPSS",
     "RDAP",

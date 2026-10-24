@@ -39,3 +39,15 @@
   tipo: legislacao
   tags: [decreto, estrategia, gsi, brasil]
   verificado_em: 2026-10-24
+
+- nome: PNCiber
+  url: https://guiluzsal.github.io/riac/ecossistema/legislacao/pnciber/
+  descricao: >-
+    Política Nacional de Cibersegurança, instituída pelo Decreto nº
+    11.856, de 26 de dezembro de 2023, que também cria o Comitê Nacional
+    de Cibersegurança (CNCiber). Define princípios, objetivos e
+    instrumentos (Estratégia e Plano Nacional de Cibersegurança) que
+    orientam a E-Ciber. Texto integral disponível no RIAC.
+  tipo: legislacao
+  tags: [decreto, politica, gsi, brasil]
+  verificado_em: 2026-10-24
